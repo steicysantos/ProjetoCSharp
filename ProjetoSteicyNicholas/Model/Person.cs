@@ -10,4 +10,12 @@ public class Person
 
     private Address adress;
 
+    public String getName(){
+        return name;
+    }
+
+    public INT getAge(){
+        return 
+    }
+
 }
