@@ -2,5 +2,9 @@ namespace Model;
 
 public class WishList{
     private Cliente cliente;
-    private Priduct listaProdutos;
+    List <Product> listaProdutos=new List<Product>();
+
+    public addProductToWishList(Product product){
+        listaProdutos.Add(product);
+    }
 }
