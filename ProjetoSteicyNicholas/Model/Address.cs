@@ -5,4 +5,5 @@ public class Adress{
     protected String state = "";
     protected String country = "";
     protected String posteCode = "";
+    protected Address address;
 }

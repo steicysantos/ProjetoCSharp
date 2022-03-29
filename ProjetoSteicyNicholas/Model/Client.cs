@@ -1,3 +1,7 @@
 namespace Model;
 
-public class Client : Person{}
+public class Client : Person{
+
+
+    
+}
