@@ -3,11 +3,11 @@
 public class Owner : Person{
 
     private Owner instance;
-    private Adress adress;
+    private Address adress;
     public static Owner getInstance(){
         if(instance == null){
             instance = new Owner();
-            adress = new Adress();
+            adress = new Address();
         }
 
         return instance;
