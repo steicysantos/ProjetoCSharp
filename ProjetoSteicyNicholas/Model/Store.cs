@@ -12,4 +12,29 @@ public class Store
         purchases.Add(purchase);
     }
 
+    public String getName(){
+        return name;
+    }
+    public String getCNPJ(){
+        return CNPJ;
+    }
+    public Owner getOwner(){
+        return owner;
+    }
+    public Purchase getPurchase(){
+        return purchase;
+    }
+
+    public void setName(String name){
+        this.name=name;
+    }
+    public void setCNPJ(String CNPJ){
+        this.CNPJ=CNPJ;
+    }
+    public void setOwner(Owner owner){
+        this.owner=owner;
+    }
+    public void setPurchase(Purchase purchase){
+        this.purchase=purchase;
+    }
 }
