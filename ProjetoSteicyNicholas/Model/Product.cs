@@ -8,7 +8,7 @@ public class Product{
     public String getName(){
         return name;
     }
-    public Double getUnitPrice(){
+    public Double getUnitprice(){
         return unitPrice;
     }
     public String getBarCode(){

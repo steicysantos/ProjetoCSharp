@@ -1,0 +1,37 @@
+- Selecionar as compras de um determinado cliente.
+SELECT * FROM purchase where codPerson = 2
+- Selecionar as compras de um determinado cliente pelo CPF.
+SELECT * FROM purchase INNER JOIN Person ON purchase.codPerson=Person.codPerson where document='281.215.513-68'
+- Selecionar a quantidade de determinado produto dos estoques de todas as lojas.
+SELECT SUM(quantity) from Stocks where codProduto=3
+-  Selecionar quais clientes têm em suas WishList um determinado produto pelo nome do produto.
+SELECT Person.name from WishList INNER JOIN Product ON WishList.codProduto=Product.codProduto 
+INNER JOIN Person ON WishList.codPerson=Person.codPerson where Product.name='Chapinha Mondial'
+- Apagar um cliente criado.
+DELETE TOP (1) FROM Person where codCargo=2;
+- Apagar um dono criado.
+DELETE TOP (1) FROM Person where codCargo=1;
+-  Apagar uma loja criada.
+DELETE FROM stocks where codLoja=1;
+DELETE FROM Store WHERE codLoja=1;
+-  Apagar uma wishlist criada.
+DELETE FROM WishList where codWishList=1
+- Atualizar o método de pagamento de uma compra.
+UPDATE TOP(1) Purchase SET  payment='dinheiro' WHERE payment='debito'
+
+- Selecionar todas as compras que tenham como remetente determinado país.
+select * from ((Person inner join Purchase on Person.codPerson = Purchase.codPerson)
+inner join Address on Person.codEndereco = Address.codEndereco)
+where country = ''
+- Selecionar todas as compras que tenham como destinatário determinada cidade. 
+select * from ((Person inner join Purchase on Person.codPerson = Purchase.codPerson)
+inner join Address on Person.codEndereco = Address.codEndereco)
+where city = ''
+
+- Selecionar quantidade de clientes por países.
+select Address.country, COUNT(Address.country) as qtd_clientes from (Person inner join Address on Person.codEndereco = Address.codEndereco) WHERE codCargo=2 group by Address.country 
+
+- Selecionar quantidade de lojas por países.  
+select Address.country,COUNT(Address.country) as qtd_lojas from (((Store inner join Person on Store.codPerson = Person.codPerson))
+inner join Address on Person.codEndereco = Address.codEndereco)
+group by Address.country

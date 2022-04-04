@@ -7,7 +7,7 @@ public class Store
     private Purchase purchase;
 
     List<Purchase> purchases = new List<Purchase>();
-
+    public Store(Owner owner){this.owner=owner;}
     public void addNewPurchase(Purchase purchase){
         purchases.Add(purchase);
     }

@@ -1,10 +1,10 @@
 namespace Model;
 public class Stocks{
-    public INT quantity;
+    public int quantity;
     private Store store;
     private Product product;
 
-    public INT getQuantity(){
+    public int getQuantity(){
         return quantity;
     }
 
@@ -16,7 +16,7 @@ public class Stocks{
         return product;
     }
 
-    public void setQuantity(INT quantity){
+    public void setQuantity(int quantity){
         this.quantity = quantity;
     }
 

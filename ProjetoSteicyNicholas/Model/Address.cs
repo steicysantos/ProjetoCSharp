@@ -1,12 +1,23 @@
+using System;
+using Interfaces;
+using Model;
+
 namespace Model;
-public class Adress{
+
+public class Address : IValidateDataObject<Address> {
     protected String street = "";
     protected String city = "";
     protected String state = "";
     protected String country = "";
     protected String posteCode = "";
 
-
+    public Address(String street,String city,String state,String country,String posteCode){
+        this.street=street;
+        this.city=city;
+        this.state=state;
+        this.country=country;
+        this.posteCode=posteCode;
+    }
 
     public string getStreet(){
         return street;
@@ -38,5 +49,20 @@ public class Adress{
     }
     public void setPosteCode(string posteCode){
         this.posteCode=posteCode;
+    }
+
+    public bool validateObject(Address obj){
+        if (obj.city == null)
+            return false;
+        else if (obj.state == null)
+            return false;
+        else if (obj.country == null)
+            return false;
+        else if (obj.posteCode == null)
+            return false;
+        else if (obj.street == null)
+            return false;
+        else return true;
+
     }
 }

@@ -1,28 +1,31 @@
 namespace Model;
+using Enums;
 
 public class Purchase{
     private DateTime datePurchase;
-    private String payment = "";
+    private int purchase_status;
+    private int payment_type;
     private String numberConfirmation = "";
     private String numberNF = "";
-    private Product product;
+    private List<Product> product=new List<Product>();
     private Store store;
     private Client cliente;
+
 
 
     public DateTime getDatePurchase(){
         return datePurchase;
     }
-    public String getPayment(){
-        return payment;
+    public int getPaymentType(){
+        return payment_type;
     }
     public String getNumberConfirmation(){
         return numberConfirmation;
     }
-    public String getNumberNF(){
+    public String getNumberNf(){
         return numberNF;
     }
-    public Product getProduct(){
+    public List<Product> getProducts(){
         return product;
     }
     public Store getStore(){
@@ -31,19 +34,19 @@ public class Purchase{
     public Client getClient(){
         return cliente;
     }
-    public void setDatePurchase(DateTime datePurchase){
-        this.datePurchase=datePurchase;
+    public int getPurchaseStatus(){
+        return purchase_status;
     }
-    public void setPayment(String payment){
-        this.payment=payment;
+    public void setDataPurchase(DateTime datePurchase){
+        this.datePurchase=datePurchase;
     }
     public void setNumberConfirmation(String numberConfirmation){
         this.numberConfirmation=numberConfirmation;
     }
-    public void setNumberNF(String numberNF){
+    public void setNumberNf(String numberNF){
         this.numberNF=numberNF;
     }
-    public void setProduct(Product product){
+    public void setProducts(List<Product> product){
         this.product=product;
     }
     public void setStore(Store store){
@@ -51,6 +54,12 @@ public class Purchase{
     }
     public void setClient(Client cliente){
         this.cliente=cliente;
+    }
+    public void setPaymentType(PaymentEnum payment_type){
+        this.payment_type=(int)payment_type;
+    }
+    public void setPurchaseStatus(PurchaseStatusEnum purchase_status){
+        this.purchase_status=(int)purchase_status;
     }
 
 }

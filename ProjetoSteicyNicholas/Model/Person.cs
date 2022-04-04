@@ -8,13 +8,13 @@ public class Person
     protected String phone = "";
     protected String login = "";
 
-    private Address adress;
-
+    protected Address address;
+    protected Person(Address address){this.address=address;}
     public String getName(){
         return name;
     }
 
-    public INT getAge(){
+    public int getAge(){
         return age;
     }
 
@@ -38,7 +38,7 @@ public class Person
         this.name = name;
     }
 
-    public void setAge(INT age){
+    public void setAge(int age){
         this.age = age;
     }
 
@@ -56,5 +56,9 @@ public class Person
 
     public void setLogin(String login){
     this.login = login;
+    }
+
+    public Address getAddress(){
+        return address;
     }
 }
