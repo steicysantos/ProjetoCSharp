@@ -1,5 +1,5 @@
 namespace Model;
-public class Store
+public class Store : IValidateDataObject<Address>
 {
     private String name = "";
     private String CNPJ = "";
