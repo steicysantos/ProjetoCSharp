@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "iyBCq3zn5HoPn86Yw2KExv4FzWijn/BQYp2gmoJR2Qeov+rMQlW7yvaYnxQ+x31rmwhbprk+UlG/glla1KxWDg==",
+  "success": true,
+  "projectFilePath": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\5 - Desenvolvimento de Sistemas\\1 - Alunos\\Nicholas Stelmach Vicente\\c#\\ProjetoCSharp\\ProjetoSteicyNicholas\\Interfaces\\Interfaces.csproj",
+=======
   "dgSpecHash": "e79Mr5/PmWSyOuiP8YTu/GEMz7+WYiqvH1fbpAOpcr9D9SwGRtK3mtetnY103GZHl9AzoWE4pNot2aEB13Jr2w==",
   "success": true,
   "projectFilePath": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\5 - Desenvolvimento de Sistemas\\1 - Alunos\\Steicy Santos\\c#\\ProjetoSteicyNicholas\\ProjetoCSharp-1\\ProjetoSteicyNicholas\\Interfaces\\Interfaces.csproj",
+>>>>>>> c0b005664fa493d66ec7e72b5ab31af2f54b215b
   "expectedPackageFiles": [
     "C:\\Users\\disrct\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\disrct\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
