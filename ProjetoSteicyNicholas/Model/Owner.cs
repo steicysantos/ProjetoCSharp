@@ -1,4 +1,5 @@
 ﻿namespace Model;
+using Interfaces;
 
 public class Owner : Person,IValidateDataObject<Owner>{
 
