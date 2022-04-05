@@ -1,3 +1,4 @@
+using Interfaces;
 namespace Model;
 public class Product{
     private String name = "";
