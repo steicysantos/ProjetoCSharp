@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "Uvl7avyLa/uKfH5EhWo7O+2v1bMD+hxuRCIxA/CD3YpvntK2RPYCLovhCHgEAAFRNChIQW4ZzjZVFWQ1a/7Tow==",
   "success": true,
   "projectFilePath": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\5 - Desenvolvimento de Sistemas\\1 - Alunos\\Nicholas Stelmach Vicente\\c#\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj",
-=======
-  "dgSpecHash": "LFGdbRwUAaeOCiIMWB3RlflHl37HjSTuRFsc6owUVzqInT+ipcY1jh3kTydun0tK9o6CUKivQBGVOeDLM/urjw==",
-  "success": true,
-  "projectFilePath": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\5 - Desenvolvimento de Sistemas\\1 - Alunos\\Steicy Santos\\c#\\ProjetoSteicyNicholas\\ProjetoCSharp-1\\ProjetoSteicyNicholas\\Enums\\Enums.csproj",
->>>>>>> c0b005664fa493d66ec7e72b5ab31af2f54b215b
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\5 - Desenvolvimento de Sistemas\\1 - Alunos\\Nicholas Stelmach Vicente\\c#\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
