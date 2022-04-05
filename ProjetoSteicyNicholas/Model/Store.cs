@@ -1,5 +1,6 @@
+using Interfaces;
 namespace Model;
-public class Store : IValidateDataObject<Address>
+public class Store
 {
     private String name = "";
     private String CNPJ = "";

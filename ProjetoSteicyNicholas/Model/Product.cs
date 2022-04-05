@@ -1,5 +1,6 @@
+using Interfaces;
 namespace Model;
-public class Product: IValidateDataObject<Product>{
+public class Product{
     private String name = "";
     private Double unitPrice;
     private String barCode = "";
