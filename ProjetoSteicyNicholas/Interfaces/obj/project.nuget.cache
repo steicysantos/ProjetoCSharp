@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FqYpXCg8pQgJJp5XTWviBEmGDKvV3UBk/1y8uou5R1BiZ5/tKlsOila4MEljKQ22RepqFkCWLjVgN7o/lxJZJg==",
+  "dgSpecHash": "iyBCq3zn5HoPn86Yw2KExv4FzWijn/BQYp2gmoJR2Qeov+rMQlW7yvaYnxQ+x31rmwhbprk+UlG/glla1KxWDg==",
   "success": true,
-  "projectFilePath": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\5 - Desenvolvimento de Sistemas\\1 - Alunos\\Nicholas Stelmach Vicente\\c#\\ProjetoCSharpAvancado\\ProjetoSteicyNicholas\\Interfaces\\Interfaces.csproj",
+  "projectFilePath": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\5 - Desenvolvimento de Sistemas\\1 - Alunos\\Nicholas Stelmach Vicente\\c#\\ProjetoCSharp\\ProjetoSteicyNicholas\\Interfaces\\Interfaces.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\disrct\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\disrct\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
