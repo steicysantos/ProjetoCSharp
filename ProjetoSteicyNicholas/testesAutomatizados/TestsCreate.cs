@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using Model;
+using Models;
 using System.Collections.Generic;
 using System;
 
@@ -30,7 +30,7 @@ namespace testesAutomatizados
             Assert.AreEqual(adr.getCity(), testClient.getAddress().getCity());
             Assert.AreEqual(adr.getState(), testClient.getAddress().getState());
             Assert.AreEqual(adr.getCountry(), testClient.getAddress().getCountry());
-            Assert.AreEqual(adr.getPosteCode(), testClient.getAddress().getPosteCode());            
+            Assert.AreEqual(adr.getPostalCode(), testClient.getAddress().getPostalCode());            
 
         }
 
@@ -43,7 +43,7 @@ namespace testesAutomatizados
             Assert.That("cidadeUm", Is.EqualTo(testAddress.getCity()));
             Assert.That("EstadoDois", Is.EqualTo(testAddress.getState()));
             Assert.That("PaisTres", Is.EqualTo(testAddress.getCountry()));
-            Assert.That("80050450", Is.EqualTo(testAddress.getPosteCode()));
+            Assert.That("80050450", Is.EqualTo(testAddress.getPostalCode()));
         }
 
         [Test]
@@ -68,7 +68,7 @@ namespace testesAutomatizados
             Assert.AreEqual(adr.getCity(), testOwner.getAddress().getCity());
             Assert.AreEqual(adr.getState(), testOwner.getAddress().getState());
             Assert.AreEqual(adr.getCountry(), testOwner.getAddress().getCountry());
-            Assert.AreEqual(adr.getPosteCode(), testOwner.getAddress().getPosteCode());    
+            Assert.AreEqual(adr.getPostalCode(), testOwner.getAddress().getPostalCode());    
         }
 
         [Test]
@@ -125,13 +125,13 @@ namespace testesAutomatizados
             testPurchase.setNumberConfirmation("0123456");
             testPurchase.setNumberNf("987654321");
             testPurchase.setPaymentType(Enums.PaymentEnum.initial);
-            testPurchase.setPurchaseStatus(Enums.PurchaseStatusEnum.awaitingPayment);
+            testPurchase.setPurchaseStatus(Enums.PurcahseStatusEnum.awaitingPayment);
             testPurchase.setProducts(products);
 
             Assert.That(testPurchase.getNumberConfirmation, Is.EqualTo("0123456"));
             Assert.That(testPurchase.getNumberNf, Is.EqualTo("987654321"));
             Assert.That(testPurchase.getPaymentType(), Is.EqualTo((int)Enums.PaymentEnum.initial));
-            Assert.That(testPurchase.getPurchaseStatus(), Is.EqualTo((int)Enums.PurchaseStatusEnum.awaitingPayment));
+            Assert.That(testPurchase.getPurchaseStatus(), Is.EqualTo((int)Enums.PurcahseStatusEnum.awaitingPayment));
             Assert.That(testPurchase.getProducts().Count, Is.EqualTo(3));
         }
 
