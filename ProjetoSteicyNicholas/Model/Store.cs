@@ -1,6 +1,10 @@
+using System;
 using Interfaces;
+using Model;
+
 namespace Model;
-public class Store
+
+public class Store : IValidateDataObject<Store>
 {
     private String name = "";
     private String CNPJ = "";
@@ -37,5 +41,18 @@ public class Store
     }
     public void setPurchase(Purchase purchase){
         this.purchase=purchase;
+    }
+    public bool validateObject(Store obj)
+    {
+        if (obj.name == null)
+            return false;
+        else if (obj.CNPJ == null)
+            return false;
+        else if (obj.owner == null)
+            return false;
+        else if (obj.purchase == null)
+            return false;
+        else return true;
+
     }
 }
