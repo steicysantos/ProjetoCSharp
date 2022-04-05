@@ -1,5 +1,5 @@
 namespace Model;
-public class Person : IValidateDataObject<Person>
+public class Person
 {
     protected String name = "";
     protected int age;
@@ -61,19 +61,4 @@ public class Person : IValidateDataObject<Person>
     public Address getAddress(){
         return address;
     }
-}
-public bool validateObject(Person obj){
-    if(obj.name == null)
-        return false;
-    else if (obj.age == null)
-        return false;
-    else if (obj.document == null)
-        return false;
-    else if (obj.email == null)
-        return false;
-    else if(obj.phone == null)
-        return false;
-    else if(obj.login == null)
-        return false;
-    else return true;
 }
