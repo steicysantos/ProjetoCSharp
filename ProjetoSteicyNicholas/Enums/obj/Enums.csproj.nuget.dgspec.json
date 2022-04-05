@@ -1,19 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\5 - Desenvolvimento de Sistemas\\1 - Alunos\\Nicholas Stelmach Vicente\\c#\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj": {}
-  },
-  "projects": {
-    "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\5 - Desenvolvimento de Sistemas\\1 - Alunos\\Nicholas Stelmach Vicente\\c#\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\5 - Desenvolvimento de Sistemas\\1 - Alunos\\Nicholas Stelmach Vicente\\c#\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj",
-        "projectName": "Enums",
-        "projectPath": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\5 - Desenvolvimento de Sistemas\\1 - Alunos\\Nicholas Stelmach Vicente\\c#\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj",
-        "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-        "outputPath": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\5 - Desenvolvimento de Sistemas\\1 - Alunos\\Nicholas Stelmach Vicente\\c#\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\obj\\",
-=======
     "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\5 - Desenvolvimento de Sistemas\\1 - Alunos\\Steicy Santos\\c#\\ProjetoSteicyNicholas\\ProjetoCSharp-1\\ProjetoSteicyNicholas\\Enums\\Enums.csproj": {}
   },
   "projects": {
@@ -25,7 +12,6 @@
         "projectPath": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\5 - Desenvolvimento de Sistemas\\1 - Alunos\\Steicy Santos\\c#\\ProjetoSteicyNicholas\\ProjetoCSharp-1\\ProjetoSteicyNicholas\\Enums\\Enums.csproj",
         "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
         "outputPath": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\5 - Desenvolvimento de Sistemas\\1 - Alunos\\Steicy Santos\\c#\\ProjetoSteicyNicholas\\ProjetoCSharp-1\\ProjetoSteicyNicholas\\Enums\\obj\\",
->>>>>>> c0b005664fa493d66ec7e72b5ab31af2f54b215b
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

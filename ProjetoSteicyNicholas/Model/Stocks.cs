@@ -1,7 +1,12 @@
-
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Interfaces;
 namespace Model;
 
-public class Stocks{
+public class Stocks : IValidateDataObject<Stocks>{
     public int quantity;
     private Store store;
     private Product product;
@@ -29,4 +34,15 @@ public class Stocks{
     public void setProduct(Product product){
         this.product = product;
     }
+
+    public bool validateObject(Stocks obj){
+        if(obj.quantity == null)
+            return false;
+        else if(obj.store == null)
+            return false;
+        else if(obj.product == null)
+            return false;
+        else return true;
+    }
+
 }
