@@ -1,10 +1,7 @@
-﻿namespace DAO;
-
+namespace DAO;
 public class Store
 {
-    public int id;
-    public String name = "";
-    public String CNPJ = "";
+    public string Name { get; set; }
+    public string CNPJ { get; set; }
     public Owner owner;
-    public Purchase purchase;
 }
