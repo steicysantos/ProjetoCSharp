@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Collections.Generic;
 
-public class DaoContext
+public class Context
 {
     public DbSet<Address> address { get; set; }
     public DbSet<Client> clients {get; set;}
