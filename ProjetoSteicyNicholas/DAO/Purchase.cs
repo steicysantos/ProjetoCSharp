@@ -1,11 +1,12 @@
 namespace DAO;
 public class Purchase{
+    public int id;
     public DateTime datePurchase;
-    public int purchase_status;
+    public string purchase_status;
     public int payment_type;
     public String numberConfirmation = "";
     public String numberNF = "";
-    public List<Product> product=new List<Product>();
+    public Product product;
     public Store store;
     public Client client;
 }

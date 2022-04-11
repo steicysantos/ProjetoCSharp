@@ -21,5 +21,22 @@ public class Context
     }
     protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+           base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Address>(entity=>{
+                entity.HasKey(e=>e.id);
+                entity.Property(e=>e.street).IsRequired();
+                entity.Property(e=>e.city).IsRequired();
+                entity.Property(e=>e.state).IsRequired();
+                entity.Property(e=>e.country).IsRequired();
+                entity.Property(e=>e.posteCode).IsRequired();
+            });
+            modelBuilder.Entity<Address>(entity=>{
+                entity.HasKey(e=>e.id);
+                entity.Property(e=>e.street).IsRequired();
+                entity.Property(e=>e.city).IsRequired();
+                entity.Property(e=>e.state).IsRequired();
+                entity.Property(e=>e.country).IsRequired();
+                entity.Property(e=>e.posteCode).IsRequired();
+            });
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
