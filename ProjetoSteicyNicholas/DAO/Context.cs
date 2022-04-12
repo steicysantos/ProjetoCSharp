@@ -13,7 +13,7 @@ public class Context:DbContext
     public DbSet<WishList> wishLists {get;set;}
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(@"Server=JVLPC0506;Initial Catalog=Marketplace;Integrated Security=True");
+        optionsBuilder.UseSqlServer(@"Server=JVLPC0562;Initial Catalog=Marketplace;Integrated Security=True");
     }
     protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -97,4 +97,4 @@ public class Context:DbContext
             entity.HasOne(d => d.client);
         });
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-        }
+        }}

@@ -17,31 +17,31 @@ using (var context = new DaoContext())
     
     context.clients.Add(new Client
     {
-        name = "alison",
-        age = 19,
-        password = "alison",
-        email = "alison@yahoo.com",
+        name = "Carlos",
+        age = 17,
+        password = "carcos",
+        email = "carcos@gmail.com",
         phone = "41999999999",
-        login = "alison17",
+        login = "carcos17",
         address = address
     });
 
     context.owners.Add(new Owner
     {
-        name = "alison",
+        name = "Nathan",
         age = 19,
-        password = "alison",
-        email = "alison@yahoo.com",
+        password = "nathan",
+        email = "nathan@gmail.com",
         phone = "41999999999",
-        login = "alison17",
+        login = "nathan17",
         address = address
     });
 
     context.products.Add(new Product
     {
-        name = "abacaxi",
-        unit_price = 13.20,
-        bar_code = "1234567890"
+        name = "celular",
+        unit_price = 1599.99,
+        bar_code = "123123123"
     });
 
     // Saves changes
