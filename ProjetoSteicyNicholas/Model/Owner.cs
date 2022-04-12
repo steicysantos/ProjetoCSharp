@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 ﻿using System;
 using Interfaces;
 namespace Model;
-=======
-﻿namespace Model;
-using Interfaces;
->>>>>>> 29b7f701d1ca61a55db215810abf4a58b133276e
 
 public class Owner : Person,IValidateDataObject<Owner>{
 

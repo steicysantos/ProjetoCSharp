@@ -11,37 +11,37 @@ using (var context = new Context())
         city = "Curitiba",
         state = "Paraná",
         country = "Brasil",
-        poste_code = "81130040"
+        posteCode = "81130040"
     };
-    context.address.Add(address);
+    context.Address.Add(address);
     
-    context.clients.Add(new Client
+    context.Client.Add(new Client
     {
-        name = "alison",
-        age = 19,
-        password = "alison",
-        email = "alison@yahoo.com",
+        name = "Carlos",
+        age = 17,
+        passwd = "carcos",
+        email = "carcos@gmail.com",
         phone = "41999999999",
-        login = "alison17",
+        login = "carcos17",
         address = address
     });
 
-    context.owners.Add(new Owner
+    context.Owner.Add(new Owner
     {
-        name = "alison",
+        name = "Nathan",
         age = 19,
-        password = "alison",
-        email = "alison@yahoo.com",
+        passwd = "nathan",
+        email = "nathan@gmail.com",
         phone = "41999999999",
-        login = "alison17",
+        login = "nathan17",
         address = address
     });
 
-    context.products.Add(new Product
+    context.Product.Add(new Product
     {
-        name = "abacaxi",
-        unit_price = 13.20,
-        bar_code = "1234567890"
+        name = "celular",
+        unitPrice = 1599.99,
+        barCode = "123123123"
     });
 
     // Saves changes

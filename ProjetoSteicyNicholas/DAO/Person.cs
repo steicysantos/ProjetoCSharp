@@ -8,4 +8,5 @@ public class Person
     public String phone = "";
     public String login = "";
     public string passwd;
+    public Address address;
 }
