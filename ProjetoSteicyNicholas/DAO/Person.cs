@@ -3,7 +3,7 @@ public class Person
 {
     public int id;
     public String name = "";
-    public int date_of_birth;
+    public int age;
     public String email = "";
     public String phone = "";
     public String login = "";

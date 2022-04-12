@@ -13,7 +13,7 @@ public class Context:DbContext
     public DbSet<WishList> wishLists {get;set;}
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Test");
+        optionsBuilder.UseSqlServer(@"Server=JVLPC0506;Initial Catalog=Marketplace;Integrated Security=True");
     }
     protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
