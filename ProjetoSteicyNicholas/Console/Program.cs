@@ -1,6 +1,6 @@
 ﻿using DAO;
 
-using (var context = new DaoContext())
+using (var context = new Context())
 {
 
     context.Database.EnsureCreated();
