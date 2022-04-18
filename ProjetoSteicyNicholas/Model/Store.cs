@@ -1,7 +1,8 @@
 using System;
-using Interfaces;
-using Model;
-
+using Interfaces; 
+using DAO;
+using DTO;
+using System.Collections.Generic;
 namespace Model;
 
 public class Store : IValidateDataObject, IDataController<StoreDTO, Store>

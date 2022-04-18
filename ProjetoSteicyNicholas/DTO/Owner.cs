@@ -1,4 +1,4 @@
-namespace DAO;
+namespace DTO;
 public class OwnerDTO
 {
     public String name = "";
