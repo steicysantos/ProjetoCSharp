@@ -3,7 +3,7 @@ using Interfaces;
 
 namespace Model;
 
-public class Client : Person, IValidateDataObject<Client>{
+public class Client : Person, IValidateDataObject<Client>,IDataController<ClientDTO, Client>{
     private static Client instance;
     public static Client getInstance(Address address){
         if(Client.instance == null){
@@ -33,6 +33,62 @@ public class Client : Person, IValidateDataObject<Client>{
         else return true;
 
     }
+
+     public static Client convertDTOToModel(ClientDTO obj){
+        return new Client(obj.name, obj.date_of_birth, obj.document, obj.email, obj.phone, obj.login, obj.address);
+    }
+
+    public void delete(ClientDTO obj){
+
+    }
+
+    public int save()
+    {
+        var id = 0;
+
+        using(var context = new DAOContext())
+        {
+            var client = new DAO.Client{
+                name = this.name,
+                date_of_birth = this.date_of_birth,
+                document = this.document,
+                email = this.email,
+                phone = this.phone,
+                login = this.login,
+                address = this.address
+            };
+
+            context.Client.Add(client);
+            context.SaveChanges();
+            id = client.id;
+
+        }
+         return id;
+    }
+
+    public void update(ClientDTO obj){
+
+    }
+
+    public ClientDTO findById(int id){
+        return new ClientDTO();
+    }
+
+    public List<ClientDTO> getAll(){
+        return this.clientDTO;
+    }
+
+    public ClientDTO convertModelToDTO(){
+        var clientDTO = new ClientDTO();
+        clientDTO.name = this.name;
+        clientDTO.date_of_birth = this.date_of_birth;
+        clientDTO.document = this.document;
+        clientDTO.email = this.email;
+        clientDTO.phone = this.phone;
+        clientDTO.login = this.login;
+        clientDTO.address = this.address;
+    }
+
 
 
 }

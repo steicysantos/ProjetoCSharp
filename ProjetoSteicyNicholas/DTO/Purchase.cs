@@ -5,7 +5,7 @@ public class PurchaseDTO{
     public int payment_type;
     public String numberConfirmation = "";
     public String numberNF = "";
-    public ProductDTO product;
+    public List<ProductDTO> product = new List<ProductDTO>();
     public StoreDTO store;
     public ClientDTO client;
 }

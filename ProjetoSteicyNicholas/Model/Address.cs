@@ -69,6 +69,46 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
             id = address.id;
 
         }
+<<<<<<< HEAD
+        public static Address convertDTOToModel(AddressDTO obj)
+    {
+        return new Address(obj.street, obj.city, obj.state, obj.country, obj.posteCode);
+    }
+
+
+    public Boolean validateObject()
+    {
+        return true;
+    }
+
+    public void delete(AddressDTO obj)
+    {
+
+    }
+
+    public int save()
+    {
+        var id = 0;
+
+        using(var context = new DAOContext())
+        {
+            var address = new DAO.Address{
+                street = this.street,
+                city = this.city,
+                state = this.state,
+                country = this.country,
+                posteCode = this.posteCode
+            };
+
+            context.Address.Add(address);
+
+            context.SaveChanges();
+
+            id = address.id;
+
+        }
+=======
+>>>>>>> 8eabdc72689f494d14fcedf1f0a8995b753ee91d
          return id;
     }
 
@@ -101,6 +141,12 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
 
         addressDTO.country = this.country;
 
+<<<<<<< HEAD
+        addressDTO.posteCode = this.posteCode;
+
+        return addressDTO;
+    }
+=======
         addressDTO.postal_code = this.postal_code;
 
         return addressDTO;
@@ -114,6 +160,7 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
     public void setCity(String city)
     {
         this.city = city;
+>>>>>>> 8eabdc72689f494d14fcedf1f0a8995b753ee91d
     }
 
     public void setState(String state)
