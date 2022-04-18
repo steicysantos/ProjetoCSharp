@@ -1,14 +1,13 @@
 using System;
+using Interfaces; 
+using DAO;
+using DTO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Interfaces;
 
 namespace Model
 {
 
-    public class Address : IValidateDataObject<Address>
+    public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
     {
         protected String street = "";
         protected String city = "";
@@ -82,5 +81,78 @@ namespace Model
             return true;
 
         }
+        public static Address convertDTOToModel(AddressDTO obj)
+    {
+        return new Address(obj.street, obj.city, obj.state, obj.country, obj.posteCode);
+    }
+
+
+    public Boolean validateObject()
+    {
+        return true;
+    }
+
+    public void delete(AddressDTO obj)
+    {
+
+    }
+
+    public int save()
+    {
+        var id = 0;
+
+        using(var context = new DAOContext())
+        {
+            var address = new DAO.Address{
+                street = this.street,
+                city = this.city,
+                state = this.state,
+                country = this.country,
+                posteCode = this.posteCode
+            };
+
+            context.Address.Add(address);
+
+            context.SaveChanges();
+
+            id = address.id;
+
+        }
+         return id;
+    }
+
+    public void update(AddressDTO obj)
+    {
+
+    }
+
+    public AddressDTO findById(int id)
+    {
+
+        return new AddressDTO();
+    }
+
+    public List<AddressDTO> getAll()
+    {        
+        return this.addressDTO;      
+    }
+
+   
+    public AddressDTO convertModelToDTO()
+    {
+        var addressDTO = new AddressDTO();
+
+        addressDTO.street = this.street;
+
+        addressDTO.state = this.state;
+
+        addressDTO.city = this.city;
+
+        addressDTO.country = this.country;
+
+        addressDTO.posteCode = this.posteCode;
+
+        return addressDTO;
+    }
     }
 }

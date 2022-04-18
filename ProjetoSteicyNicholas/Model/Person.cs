@@ -2,7 +2,7 @@ namespace Model;
 public class Person
 {
     protected String name = "";
-    protected Datetime date_of_birth;
+    protected DateTime date_of_birth;
     protected String document = "";
     protected String email = "";
     protected String phone = "";

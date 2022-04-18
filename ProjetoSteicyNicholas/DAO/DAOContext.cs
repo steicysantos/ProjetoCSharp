@@ -1,7 +1,7 @@
 ﻿namespace DAO;
 using Microsoft.EntityFrameworkCore;
 
-public class Context:DbContext
+public class DAOContext:DbContext
 {
     public DbSet<Address> Address { get; set; }
     public DbSet<Client> Client {get; set;}
@@ -32,7 +32,6 @@ public class Context:DbContext
         {
             entity.HasKey(e => e.id);
             entity.Property(e => e.name).IsRequired();
-            entity.Property(e => e.unitPrice).IsRequired();
             entity.Property(e => e.barCode).IsRequired();
             entity.HasOne(d => d.store);
         });
@@ -54,6 +53,7 @@ public class Context:DbContext
         {
             entity.HasKey(e => e.id);
             entity.Property(e => e.quantity).IsRequired();
+            entity.Property(e => e.unitPrice).IsRequired();
             entity.HasOne(d => d.store);
             entity.HasOne(d => d.product);
         });
