@@ -1,7 +1,6 @@
 namespace DAO;
-public class Person
+public class ClientDTO
 {
-    public int id;
     public String name = "";
     public Datetime date_of_birth;
     public String email = "";

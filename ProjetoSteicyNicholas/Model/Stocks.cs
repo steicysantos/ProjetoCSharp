@@ -8,6 +8,7 @@ namespace Model;
 
 public class Stocks : IValidateDataObject<Stocks>{
     public int quantity;
+    private Double unitPrice;
     private Store store;
     private Product product;
 
@@ -22,6 +23,9 @@ public class Stocks : IValidateDataObject<Stocks>{
     public Product getProduct(){
         return product;
     }
+    public double getUnitprice(){
+        return unitPrice;
+    }
 
     public void setQuantity(int quantity){
         this.quantity = quantity;
@@ -33,6 +37,9 @@ public class Stocks : IValidateDataObject<Stocks>{
 
     public void setProduct(Product product){
         this.product = product;
+    }
+    public void setUnitPrice(double unitPrice){
+        this.unitPrice=unitPrice;
     }
 
     public bool validateObject(Stocks obj){
