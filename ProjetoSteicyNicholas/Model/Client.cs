@@ -5,6 +5,7 @@ namespace Model;
 
 public class Client : Person, IValidateDataObject<Client>,IDataController<ClientDTO, Client>{
     private static Client instance;
+    Guid uuid = Guid.NewGuid();
     public static Client getInstance(Address address){
         if(Client.instance == null){
             Client.instance = new Client(address);
