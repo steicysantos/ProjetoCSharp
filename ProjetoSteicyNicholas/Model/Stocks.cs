@@ -112,17 +112,17 @@ public class Stocks : IValidateDataObject, IDataController<StocksDTO, Stocks>
         this.quantity = quantity;
     }
 
-    public void setUnitPrice(String unitPrice)
+    public void setUnitPrice(Double unitPrice)
     {
         this.unitPrice = unitPrice;
     }
 
-    public void setStore(String store)
+    public void setStore(Store store)
     {
         this.store = store;
     }
 
-    public void setProduct(String product)
+    public void setProduct(Product product)
     {
         this.product = product;
     }
@@ -133,17 +133,17 @@ public class Stocks : IValidateDataObject, IDataController<StocksDTO, Stocks>
         return this.quantity;
     }
 
-    public String getUnitPrice()
+    public Double getUnitPrice()
     {        
         return this.unitPrice;
     }
 
-    public String getStore()
+    public Store getStore()
     {
         return this.store;
     }
 
-    public String getProduct()
+    public Product getProduct()
     {
         return this.product;
     }
