@@ -8,7 +8,7 @@ namespace Model;
 
 public class WishList : IValidateDataObject, IDataController<WishListDTO, WishList>
 {
-    private Client cliente;
+    private Client client;
     List <Product> listaProdutos=new List<Product>();
 
     public List<WishListDTO> wishListDTO = new List<WishListDTO>();
@@ -25,7 +25,7 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
 
     public static WishList convertDTOToModel(WishListDTO obj)
     {
-        return new WishList(obj.client, obj.listaProdutos);
+        return new WishList(obj.client, obj.product);
     }
 
 

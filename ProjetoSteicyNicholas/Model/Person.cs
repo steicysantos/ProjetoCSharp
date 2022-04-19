@@ -8,30 +8,16 @@ namespace Model;
 
 public class Person
 {
-    private String name;
+    protected String name;
+    protected DateTime date_of_birth;
+    protected String document;
+    protected String email;
+    protected String phone;
+    protected String login;
 
-    private DateTime date_of_birth;
-    private String document;
-
-    private String email;
-
-    private String phone;
-    private String login;
-
-    public Person(String name,DateTime date_of_birth, String document,String email , String phone,String login){
-        this.name =  name;
-
-        this.date_of_birth = date_of_birth;
-
-        this.document = document;
-
-        this.email = email;
-
-        this.phone = phone;
-
-        this.login = login;
+    protected Person(Address address){
+        this.address=address;
     }
-
     public void setName(String name)
     {
         this.name = name;
