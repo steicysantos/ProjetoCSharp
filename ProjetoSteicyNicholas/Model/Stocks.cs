@@ -32,10 +32,10 @@ public class Stocks : IValidateDataObject, IDataController<StocksDTO, Stocks>
     {
         
         var stocks = new Stocks();
-            stocks.quantity(obj.quantity);
-            stocks.unitPrice(obj.unitPrice);
-            stocks.convertModelToDTO
-
+        stocks.quantity(obj.quantity);
+        stocks.unitPrice(obj.unitPrice);
+        stocks.store =  Store.convertDTOToModel(obj.store);
+        stocks.product=Product.convertDTOToModel(obj.product);
 
         return stocks;
         
