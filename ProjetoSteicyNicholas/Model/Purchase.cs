@@ -22,10 +22,15 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
     public static Purchase convertDTOToModel(PurchaseDTO obj)
     {
         var purchase = new Purchase();
+        purchase.client =  Client.convertDTOToModel(obj.client);
+        purchase.store =  Store.convertDTOToModel(obj.store);
+        purchase.product=Product.convertDTOToModel(obj.product);
         purchase.setDatePurchase(obj.datePurchase);
         purchase.setPurchaseStatus(obj.purchaseStatus);
         purchase.setPaymentType(obj.paymentType);
-        purchase.setNumberConfirmation
+        purchase.setNumberConfirmation(obj.numberConfirmation);
+        purchase.setNumberNF(obj.getNumberNF);
+
         return purchase;
     }
 

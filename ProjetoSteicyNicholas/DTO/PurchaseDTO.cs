@@ -6,6 +6,6 @@ public class PurchaseDTO{
     public String numberConfirmation = "";
     public String numberNF = "";
     public List<ProductDTO> product = new List<ProductDTO>();
-    public StoreDTO store;
+    public List<StoreDTO> store = new List<StoreDTO>();
     public ClientDTO client;
 }
