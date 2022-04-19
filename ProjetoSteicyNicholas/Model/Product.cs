@@ -10,16 +10,14 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
     private Store store;
     
 
-    public Product(String name,String barCode, Store store){
-        this.name =  name;
-        this.barCode = barCode;
-        this.store = store;
-    }
-
     public static Product convertDTOToModel(ProductDTO obj)
     {
-        return new Product(obj.name, obj.barCode, obj.store);
+        var product = new Product();
+        product.setName(obj.name);
+        product.setBarCode(obj.barCode);
+        return product;
     }
+    
     public void delete(ProductDTO obj){
 
     }
