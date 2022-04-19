@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Model;
 
-public class Person : IValidateDataObject, IDataController<PersonDTO, Person>
+public class Person
 {
     private String name;
 
@@ -30,83 +30,6 @@ public class Person : IValidateDataObject, IDataController<PersonDTO, Person>
         this.phone = phone;
 
         this.login = login;
-    }
-
-    public static Person convertDTOToModel(PersonDTO obj)
-    {
-        return new Person(obj.name, obj.date_of_birth, obj.document, obj.email, obj.phone, obj.login);
-    }
-
-
-    public Boolean validateObject()
-    {
-        return true;
-    }
-
-    public void delete(PersonDTO obj)
-    {
-
-    }
-
-    public int save()
-    {
-        var id = 0;
-
-        using(var context = new DAOContext())
-        {
-            var person = new DAO.Person{
-                name = this.name,
-                date_of_birth = this.date_of_birth,
-                document = this.document,
-                email = this.email,
-                phone = this.phone,
-                login = this.login
-            };
-
-            context.Person.Add(person);
-
-            context.SaveChanges();
-
-            id = person.id;
-
-        }
-         return id;
-    }
-
-    public void update(PersonDTO obj)
-    {
-
-    }
-
-    public PersonDTO findById(int id)
-    {
-
-        return new PersonDTO();
-    }
-
-    public List<PersonDTO> getAll()
-    {        
-        return this.PersonDTO;      
-    }
-
-   
-    public PersonDTO convertModelToDTO()
-    {
-        var PersonDTO = new PersonDTO();
-
-        PersonDTO.name = this.name;
-        
-        PersonDTO.date_of_birth = this.date_of_birth;
-        
-        PersonDTO.document = this.document;
-        
-        PersonDTO.email = this.email;
-        
-        PersonDTO.phone = this.phone;
-        
-        PersonDTO.login = this.login;
-
-        return PersonDTO;
     }
 
     public void setName(String name)

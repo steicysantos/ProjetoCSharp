@@ -18,28 +18,15 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
     private Store store;
     private Client client;
 
-    public Purchase(DateTime datePurchase,int purchaseStatus, int paymentType,String numberConfirmation , String numberNF, List<Product> product, Store store, Client client){
-        
-        this.datePurchase =  datePurchase;
 
-        this.purchaseStatus = purchaseStatus;
-
-        this.paymentType = paymentType;
-
-        this.numberConfirmation = numberConfirmation;
-
-        this.numberNF = numberNF;
-
-        this.product = product;
-
-        this.store = store;
-
-        this.client = client;
-    }
-
-    public static async Purchase convertDTOToModel(PurchaseDTO obj)
+    public static Purchase convertDTOToModel(PurchaseDTO obj)
     {
-        return new Purchase(obj.datePurchase, obj.purchaseStatus, obj.paymentType, obj.numberConfirmation, obj.numberNF, obj.product, obj.store, obj.client);
+        var purchase = new Purchase();
+        purchase.setDatePurchase(obj.datePurchase);
+        purchase.setPurchaseStatus(obj.purchaseStatus);
+        purchase.setPaymentType(obj.paymentType);
+        purchase.setNumberConfirmation
+        return purchase;
     }
 
 

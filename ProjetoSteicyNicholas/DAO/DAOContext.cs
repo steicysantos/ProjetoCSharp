@@ -62,7 +62,7 @@ public class DAOContext:DbContext
         {
             entity.HasKey(e => e.id);
             entity.Property(e => e.name).IsRequired();
-            entity.Property(e => e.age).IsRequired();
+            entity.Property(e => e.date_of_birth).IsRequired();
             entity.Property(e => e.passwd).IsRequired();
             entity.Property(e => e.email).IsRequired();
             entity.Property(e => e.phone).IsRequired();
@@ -74,7 +74,7 @@ public class DAOContext:DbContext
         {
             entity.HasKey(e => e.id);
             entity.Property(e => e.name).IsRequired();
-            entity.Property(e => e.age).IsRequired();
+            entity.Property(e => e.date_of_birth).IsRequired();
             entity.Property(e => e.passwd).IsRequired();
             entity.Property(e => e.email).IsRequired();
             entity.Property(e => e.phone).IsRequired();

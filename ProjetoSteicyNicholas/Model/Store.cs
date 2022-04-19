@@ -1,7 +1,8 @@
 using System;
-using Interfaces;
-using Model;
-
+using Interfaces; 
+using DAO;
+using DTO;
+using System.Collections.Generic;
 namespace Model;
 
 public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
@@ -27,7 +28,7 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
     {
         return new Store(obj.name, obj.CNPJ, obj.owner, obj.purchase);
     }
-    public void delete(AddressDTO obj)
+    public void delete(StoreDTO obj)
     {
 
     }
@@ -111,17 +112,12 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
     public void setPurchase(Purchase purchase){
         this.purchase=purchase;
     }
-    public bool validateObject(Store obj)
+    public bool validateObject()
     {
-        if (obj.name == null)
-            return false;
-        else if (obj.CNPJ == null)
-            return false;
-        else if (obj.owner == null)
-            return false;
-        else if (obj.purchase == null)
-            return false;
-        else return true;
-
+        if(this.name == null) return false;
+        if(this.CNPJ == null) return false;            
+        if(this.owner == null) return false;             
+        if(this.purchase == null) return false;      
+        return true;
     }
 }
