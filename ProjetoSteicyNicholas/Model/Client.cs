@@ -36,7 +36,7 @@ public class Client : Person, IValidateDataObject,IDataController<ClientDTO, Cli
         var client = new Client(Address.convertDTOToModel(obj.address));
             client.setDocument(obj.document);
             client.setName(obj.name);
-            client.SetDate_of_birth(obj.date_of_birth);
+            client.setDate_of_birth(obj.date_of_birth);
             client.setEmail(obj.email);
             client.setPhone(obj.phone);
             client.setLogin(obj.login);

@@ -10,7 +10,7 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
     private String name = "";
     private String CNPJ = "";
     private Owner owner;
-    private Purchase purchase;
+    private List<Purchase> purchase=new List<Purchase>();
     public List<StoreDTO> StoreDTO = new List<StoreDTO>();
     List<Purchase> purchases = new List<Purchase>();
     public Store(Owner owner){this.owner=owner;}
@@ -18,19 +18,15 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
         purchases.Add(purchase);
     }
 
-    public Store(String name, String CNPJ, Owner owner, List<Purchase> purchase){
-        this.name=name;
-        this.CNPJ=CNPJ;
-        this.owner=owner;
-        this.purchase=purchase;
-    }
     public static Store convertDTOToModel(StoreDTO obj)
     {
         var store = new Store();
         store.setName(obj.name);
         store.setCNPJ(obj.CNPJ);        
         store.owner =  Owner.convertDTOToModel(obj.owner);
-        store.purchase=Purchase.convertDTOToModel(obj.purchase);
+        foreach(var item in obj.purchase){
+            store.purchase.Add(Purchase.convertDTOToModel(item));
+        }
         
         return  store;
     }
@@ -44,11 +40,11 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
 
         using(var context = new DAOContext())
         {
+            var ownerDAO = context.owners.Where(c => c.id == owner).Single();
             var store = new DAO.Store{
                 name = this.name,
                 CNPJ = this.CNPJ,
-                owner = this.owner,
-                purchase = this.purchase
+                owner = ownerDAO
             };
 
             context.Store.Add(store);

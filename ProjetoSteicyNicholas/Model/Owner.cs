@@ -34,7 +34,17 @@ public class Owner : Person,IValidateDataObject,IDataController<OwnerDTO, Owner>
         return true;
     }
     public static Owner convertDTOToModel(OwnerDTO obj){
-        return new Client(obj.name, obj.date_of_birth, obj.document, obj.email, obj.phone, obj.login, obj.address);
+        var owner = new Owner(Address.convertDTOToModel(obj.address));
+            owner.setDocument(obj.document);
+            owner.setName(obj.name);
+            owner.setDate_of_birth(obj.date_of_birth);
+            owner.setEmail(obj.email);
+            owner.setPhone(obj.phone);
+            owner.setLogin(obj.login);
+            owner.passwd=obj.passwd;
+            owner.document=obj.document;
+            
+            return owner;
     }
 
     public void delete(OwnerDTO obj){

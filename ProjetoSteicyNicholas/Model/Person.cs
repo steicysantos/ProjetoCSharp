@@ -14,6 +14,7 @@ public class Person
     protected String email;
     protected String phone;
     protected String login;
+    protected string passwd;
     protected Address address;
     protected Person(Address address){
         this.address=address;
@@ -23,7 +24,7 @@ public class Person
         this.name = name;
     }
 
-    public void setDate_of_birth(String date_of_birth)
+    public void setDate_of_birth(DateTime date_of_birth)
     {
         this.date_of_birth = date_of_birth;
     }
@@ -47,13 +48,16 @@ public class Person
     {
         this.login = login;
     }
-
+    public void setPasswd(String passwd)
+    {
+        this.passwd = passwd;
+    }
     public String getName()
     {
         return this.name;
     }
 
-    public String getDate_of_birth()
+    public DateTime getDate_of_birth()
     {        
         return this.date_of_birth;
     }
@@ -75,6 +79,13 @@ public class Person
     public String getLogin()
     {
         return this.login;
+    }
+    public String getPasswd()
+    {
+        return this.passwd;
+    }
+    public Address getAddress(){
+        return address;
     }
 
 

@@ -20,13 +20,11 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
     public static WishList convertDTOToModel(WishListDTO obj)
     {
         var wishlist = new WishList();
-        List<Product> listanova = new List<Product>();
         wishlist.client =  Client.convertDTOToModel(obj.client);
-        var lista = Product.convertDTOToModel(obj.products);
-        for (int i=0;i<lista.Count;i++){
-            listanova.Add(lista[i]);
+
+        foreach(var item in obj.products){
+            wishList.listaProdutos.Add(Product.convertDTOToModel(item));
         }
-        wishlist.listaProdutos=listanova;
         return wishlist;
     }
 
@@ -47,6 +45,18 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
 
         using(var context = new DAOContext())
         {
+            
+            // var client = new DAO.Client
+            // {
+            //     name = this.client.getName(),
+            //     date_of_birth = this.client.getDate_of_birth(),
+            //     document = this.client.getDocument(),
+            //     email = this.client.getEmail(),
+            //     phone = this.client.getPhone(),
+            //     passwd = this.client.getPasswd(),
+            //     login = this.client.getLogin(),
+            //     address = address
+            // };
             var wishList = new DAO.WishList{
                 client = this.client,
                 listaProdutos = this.listaProdutos

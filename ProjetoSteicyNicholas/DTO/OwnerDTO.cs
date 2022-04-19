@@ -6,6 +6,7 @@ public class OwnerDTO
     public String email = "";
     public String phone = "";
     public String login = "";
+    public string document;
     public string passwd;
     public AddressDTO address;
 }
