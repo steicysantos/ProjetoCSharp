@@ -7,4 +7,5 @@ public class PurchaseDTO{
     public String numberNF;
     public List<ProductDTO> product = new List<ProductDTO>();
     public List<StoreDTO> store = new List<StoreDTO>();
+    public ClientDTO client;
 }

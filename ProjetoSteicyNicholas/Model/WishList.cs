@@ -39,38 +39,38 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
 
     }
 
-    public int save()
-    {
-        var id = 0;
+    // public int save()
+    // {
+    //     var id = 0;
 
-        using(var context = new DAOContext())
-        {
+    //     using(var context = new DAOContext())
+    //     {
             
-            // var client = new DAO.Client
-            // {
-            //     name = this.client.getName(),
-            //     date_of_birth = this.client.getDate_of_birth(),
-            //     document = this.client.getDocument(),
-            //     email = this.client.getEmail(),
-            //     phone = this.client.getPhone(),
-            //     passwd = this.client.getPasswd(),
-            //     login = this.client.getLogin(),
-            //     address = address
-            // };
-            var wishList = new DAO.WishList{
-                client = this.client,
-                listaProdutos = this.listaProdutos
-            };
+    //         var client = new DAO.Client
+    //         {
+    //             name = this.client.getName(),
+    //             date_of_birth = this.client.getDate_of_birth(),
+    //             document = this.client.getDocument(),
+    //             email = this.client.getEmail(),
+    //             phone = this.client.getPhone(),
+    //             passwd = this.client.getPasswd(),
+    //             login = this.client.getLogin(),
+    //             address = this.client.getAddress()
+    //         };
+    //         var wishList = new DAO.WishList{
+    //             client = this.client,
+    //             product = this.listaProdutos
+    //         };
 
-            context.WishList.Add(wishList);
+    //         context.WishList.Add(wishList);
 
-            context.SaveChanges();
+    //         context.SaveChanges();
 
-            id = wishList.id;
+    //         id = wishList.id;
 
-        }
-         return id;
-    }
+    //     }
+    //      return id;
+    // }
 
     public void update(WishListDTO obj)
     {
@@ -93,14 +93,14 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
     {
         var wishListDTO = new WishListDTO();
 
-        wishListDTO.client = this.client;
+        wishListDTO.client = this.client.convertModelToDTO();
 
         wishListDTO.listaProdutos = this.listaProdutos;
 
         return wishListDTO;
     }
 
-    public void setClient(String client)
+    public void setClient(Client client)
     {
         this.client = client;
     }
@@ -111,7 +111,7 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
     }
 
 
-    public String getClient()
+    public Client getClient()
     {
         return this.client;
     }

@@ -29,7 +29,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
         purchase.setPurchaseStatus(obj.purchaseStatus);
         purchase.setPaymentType(obj.paymentType);
         purchase.setNumberConfirmation(obj.numberConfirmation);
-        purchase.setNumberNF(obj.getNumberNF);
+        purchase.setNumberNF(obj.numberNF);
 
         return purchase;
     }

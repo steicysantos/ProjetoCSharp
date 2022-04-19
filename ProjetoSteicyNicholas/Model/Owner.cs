@@ -51,29 +51,29 @@ public class Owner : Person,IValidateDataObject,IDataController<OwnerDTO, Owner>
 
     }
 
-    public int save()
-    {
-        var id = 0;
+    // public int save()
+    // {
+    //     var id = 0;
 
-        using(var context = new DAOContext())
-        {
-            var client = new DAO.Client{
-                name = this.name,
-                date_of_birth = this.date_of_birth,
-                document = this.document,
-                email = this.email,
-                phone = this.phone,
-                login = this.login,
-                address = this.address
-            };
+    //     using(var context = new DAOContext())
+    //     {
+    //         var client = new DAO.Client{
+    //             name = this.name,
+    //             date_of_birth = this.date_of_birth,
+    //             document = this.document,
+    //             email = this.email,
+    //             phone = this.phone,
+    //             login = this.login,
+    //             address = this.address
+    //         };
 
-            context.Client.Add(client);
-            context.SaveChanges();
-            id = client.id;
+    //         context.Client.Add(client);
+    //         context.SaveChanges();
+    //         id = client.id;
 
-        }
-         return id;
-    }
+    //     }
+    //      return id;
+    // }
 
     public void update(OwnerDTO obj){
 
@@ -89,13 +89,14 @@ public class Owner : Person,IValidateDataObject,IDataController<OwnerDTO, Owner>
 
     public OwnerDTO convertModelToDTO(){
         var ownerDTO = new OwnerDTO();
-        OwnerDTO.name = this.name;
-        OwnerDTO.date_of_birth = this.date_of_birth;
-        OwnerDTO.document = this.document;
-        OwnerDTO.email = this.email;
-        OwnerDTO.phone = this.phone;
-        OwnerDTO.login = this.login;
-        OwnerDTO.address = this.address;
+        ownerDTO.name = this.name;
+        ownerDTO.date_of_birth = this.date_of_birth;
+        ownerDTO.document = this.document;
+        ownerDTO.email = this.email;
+        ownerDTO.phone = this.phone;
+        ownerDTO.login = this.login;
+        ownerDTO.address = this.address.convertModelToDTO();
+        return ownerDTO;
     }
 
 }

@@ -17,30 +17,30 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
         product.setBarCode(obj.barCode);
         return product;
     }
-    
+
     public void delete(ProductDTO obj){
 
     }
 
-    public int save()
-    {
-        var id = 0;
+    // public int save()
+    // {
+    //     var id = 0;
 
-        using(var context = new DAOContext())
-        {
-            var product = new DAO.Product{
-                name = this.name,
-                barCode = this.barCode,
-                store = this.store
-            };
+    //     using(var context = new DAOContext())
+    //     {
+    //         var product = new DAO.Product{
+    //             name = this.name,
+    //             barCode = this.barCode,
+    //             store = this.store
+    //         };
 
-            context.Product.Add(product);
-            context.SaveChanges();
-            id = product.id;
+    //         context.Product.Add(product);
+    //         context.SaveChanges();
+    //         id = product.id;
 
-        }
-         return id;
-    }
+    //     }
+    //      return id;
+    // }
 
     public void update(ProductDTO obj){
 

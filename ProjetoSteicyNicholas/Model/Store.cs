@@ -7,8 +7,8 @@ namespace Model;
 
 public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
 {
-    private String name = "";
-    private String CNPJ = "";
+    private String name;
+    private String CNPJ;
     private Owner owner;
     private List<Purchase> purchase=new List<Purchase>();
     public List<StoreDTO> StoreDTO = new List<StoreDTO>();
@@ -20,10 +20,9 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
 
     public static Store convertDTOToModel(StoreDTO obj)
     {
-        var store = new Store();
+        var store = new Store(Owner.convertDTOToModel(obj.owner));
         store.setName(obj.name);
         store.setCNPJ(obj.CNPJ);        
-        store.owner =  Owner.convertDTOToModel(obj.owner);
         foreach(var item in obj.purchase){
             store.purchase.Add(Purchase.convertDTOToModel(item));
         }
@@ -34,28 +33,28 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
     {
 
     }
-     public int save()
-    {
-        var id = 0;
+    //  public int save()
+    // {
+    //     var id = 0;
 
-        using(var context = new DAOContext())
-        {
-            var ownerDAO = context.owners.Where(c => c.id == owner).Single();
-            var store = new DAO.Store{
-                name = this.name,
-                CNPJ = this.CNPJ,
-                owner = ownerDAO
-            };
+    //     using(var context = new DAOContext())
+    //     {
+    //         var ownerDAO = context.owner.Where(c => c.id == owner).Single();
+    //         var store = new DAO.Store{
+    //             name = this.name,
+    //             CNPJ = this.CNPJ,
+    //             owner = ownerDAO
+    //         };
 
-            context.Store.Add(store);
+    //         context.Store.Add(store);
 
-            context.SaveChanges();
+    //         context.SaveChanges();
 
-            id = store.id;
+    //         id = store.id;
 
-        }
-         return id;
-    }
+    //     }
+    //      return id;
+    // }
 
     public void update(StoreDTO obj)
     {
@@ -82,9 +81,11 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
 
         StoreDTO.CNPJ = this.CNPJ;
 
-        StoreDTO.owner = this.owner;
+        StoreDTO.owner = this.owner.convertModelToDTO();
 
-        StoreDTO.purchase = this.purchase;
+        foreach(var item in this.purchases){
+            storeDTO.purchase.Add(item.convertModelToDTO());
+        }
 
         return storeDTO;
     }
@@ -98,7 +99,7 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
     public Owner getOwner(){
         return owner;
     }
-    public Purchase getPurchase(){
+    public List<Purchase> getPurchase(){
         return purchase;
     }
 
@@ -111,7 +112,7 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
     public void setOwner(Owner owner){
         this.owner=owner;
     }
-    public void setPurchase(Purchase purchase){
+    public void setPurchase(List<Purchase> purchase){
         this.purchase=purchase;
     }
     public bool validateObject()
