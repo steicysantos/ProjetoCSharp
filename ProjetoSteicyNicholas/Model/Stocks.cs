@@ -107,7 +107,7 @@ public class Stocks : IValidateDataObject, IDataController<StocksDTO, Stocks>
         return stocksDTO;
     }
 
-    public void setQuantity(String quantity)
+    public void setQuantity(int quantity)
     {
         this.quantity = quantity;
     }
@@ -128,7 +128,7 @@ public class Stocks : IValidateDataObject, IDataController<StocksDTO, Stocks>
     }
 
 
-    public String getQuantity()
+    public int getQuantity()
     {
         return this.quantity;
     }
