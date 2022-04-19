@@ -2,5 +2,5 @@ namespace DTO;
 
 public class WishListDTO{
     public ClientDTO client;
-    public List<ProductDTO> product= new List<ProductDTO>();
+    public List<ProductDTO> products= new List<ProductDTO>();
     }

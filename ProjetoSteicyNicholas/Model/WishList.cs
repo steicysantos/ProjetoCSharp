@@ -17,15 +17,17 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
         listaProdutos.Add(product);
     }
 
-    public WishList(Client client,List<Product> listaProdutos){
-        this.client =  client;
-
-        this.listaProdutos = listaProdutos;
-    }
-
     public static WishList convertDTOToModel(WishListDTO obj)
     {
-        return new WishList(obj.client, obj.product);
+        var wishlist = new WishList();
+        List<Product> listanova = new List<Product>();
+        wishlist.client =  Client.convertDTOToModel(obj.client);
+        var lista = Product.convertDTOToModel(obj.products);
+        for (int i=0;i<lista.Count;i++){
+            listanova.Add(lista[i]);
+        }
+        wishlist.listaProdutos=listanova;
+        return wishlist;
     }
 
 

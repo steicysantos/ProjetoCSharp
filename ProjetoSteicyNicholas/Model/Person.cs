@@ -14,7 +14,7 @@ public class Person
     protected String email;
     protected String phone;
     protected String login;
-
+    protected Address address;
     protected Person(Address address){
         this.address=address;
     }
