@@ -16,17 +16,6 @@ public class Stocks : IValidateDataObject, IDataController<StocksDTO, Stocks>
 
     private Product product;
 
-    
-    public Stocks(int quantity,Double unitPrice, Store store,Product product){
-        this.quantity =  quantity;
-
-        this.unitPrice = unitPrice;
-
-        this.store = store;
-
-        this.product = product;
-
-    }
 
     public static Stocks convertDTOToModel(StocksDTO obj)
     {

@@ -45,32 +45,32 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
 
     }
 
-    public int save()
-    {
-        var id = 0;
+    // public int save()
+    // {
+    //     var id = 0;
 
-        using(var context = new DAOContext())
-        {
-            var purchase = new DAO.Purchase{
-                datepurchase = this.datepurchase,
-                purchaseStatus = this.purchaseStatus,
-                paymentType = this.paymentType,
-                numberConfirmation = this.numberConfirmation,
-                numberNF = this.numberNF,
-                product = this.product,
-                store = this.store,
-                client = this.client
-            };
+    //     using(var context = new DAOContext())
+    //     {
+    //         var purchase = new DAO.Purchase{
+    //             datepurchase = this.datepurchase,
+    //             purchaseStatus = this.purchaseStatus,
+    //             paymentType = this.paymentType,
+    //             numberConfirmation = this.numberConfirmation,
+    //             numberNF = this.numberNF,
+    //             product = this.product,
+    //             store = this.store,
+    //             client = this.client
+    //         };
 
-            context.Purchase.Add(purchase);
+    //         context.Purchase.Add(purchase);
 
-            context.SaveChanges();
+    //         context.SaveChanges();
 
-            id = purchase.id;
+    //         id = purchase.id;
 
-        }
-         return id;
-    }
+    //     }
+    //      return id;
+    // }
 
     public void update(PurchaseDTO obj)
     {
@@ -91,23 +91,23 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
    
     public PurchaseDTO convertModelToDTO()
     {
-        var PurchaseDTO = new PurchaseDTO();
+        var purchaseDTO = new PurchaseDTO();
 
-        PurchaseDTO.datePurchase = this.datePurchase;
+        purchaseDTO.datePurchase = this.datePurchase;
 
-        PurchaseDTO.purchaseStatus = this.purchaseStatus;
+        purchaseDTO.purchaseStatus = this.purchaseStatus;
 
-        PurchaseDTO.paymentType = this.paymentType;
+        purchaseDTO.paymentType = this.paymentType;
 
-        PurchaseDTO.numberConfirmation = this.numberConfirmation;
+        purchaseDTO.numberConfirmation = this.numberConfirmation;
 
-        PurchaseDTO.numberNF = this.numberNF;
+        purchaseDTO.numberNF = this.numberNF;
 
-        PurchaseDTO.product = this.product;
+        purchaseDTO.product = this.product.convertModelToDTO();
 
-        PurchaseDTO.store = this.store;
+        purchaseDTO.store = this.store.convertModelToDTO();
 
-        PurchaseDTO.client = this.client;
+        purchaseDTO.client = this.client.convertModelToDTO();
 
         return purchaseDTO;
     }

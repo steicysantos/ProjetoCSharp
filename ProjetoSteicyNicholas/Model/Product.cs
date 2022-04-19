@@ -55,10 +55,11 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
     }
 
     public ProductDTO convertModelToDTO(){
-        var ProductDTO = new ProductDTO();
-        ProductDTO.name = this.name;
-        ProductDTO.barCode = this.barCode;
-        ProductDTO.store = this.store;
+        var productDTO = new ProductDTO();
+        productDTO.name = this.name;
+        productDTO.barCode = this.barCode;
+        productDTO.store = this.store.convertModelToDTO();
+        return productDTO;
     }
 
     public String getName(){
