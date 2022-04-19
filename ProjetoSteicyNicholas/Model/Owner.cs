@@ -23,22 +23,15 @@ public class Owner : Person,IValidateDataObject,IDataController<OwnerDTO, Owner>
         this.address = address;
     }
 
-    public bool validateObject(Owner obj)
+    public bool validateObject()
     {
-        if (obj.name == null)
-            return false;
-        else if (obj.age == null)
-            return false;
-        else if (obj.document == null)
-            return false;
-        else if (obj.email == null)
-            return false;
-        else if (obj.phone == null)
-            return false;
-        else if(obj.login==null)
-            return false;
-        else return true;
-
+        if(this.date_of_birth > DateTime.Now || DateTime.Compare(this.date_of_birth,new DateTime(1900,1,1)) < 0) return false;
+        if(this.email == null) return false;
+        if(this.document == null) return false;
+        if(this.name == null) return false;            
+        if(this.phone == null) return false;             
+        if(this.login == null) return false;      
+        return true;
     }
     public static Owner convertDTOToModel(OwnerDTO obj){
         return new Client(obj.name, obj.date_of_birth, obj.document, obj.email, obj.phone, obj.login, obj.address);

@@ -44,7 +44,7 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
          return id;
     }
 
-    public void update(ClientDTO obj){
+    public void update(ProductDTO obj){
 
     }
 
@@ -82,14 +82,11 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
         this.store=store;
     }
 
-    public Boolean validateObject(Product obj)
-        {
-            if (obj.name == null)
-                return false;
-            if (obj.unitPrice == null)
-                return false;
-            if (obj.barCode == null)
-                return false;
-            return true;
-        }
+    public bool validateObject()
+    {
+        if(this.name == null) return false;            
+        if(this.barCode == null) return false;             
+        if(this.store == null) return false;      
+        return true;
+    }
 }
