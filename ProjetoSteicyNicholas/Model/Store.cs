@@ -26,7 +26,13 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
     }
     public static Store convertDTOToModel(StoreDTO obj)
     {
-        return new Store(obj.name, obj.CNPJ, obj.owner, obj.purchase);
+        var store = new Store();
+        store.setName(obj.name);
+        store.setCNPJ(obj.CNPJ);        
+        store.owner =  Owner.convertDTOToModel(obj.owner);
+        store.purchase=Purchase.convertDTOToModel(obj.purchase);
+        
+        return  store;
     }
     public void delete(StoreDTO obj)
     {
