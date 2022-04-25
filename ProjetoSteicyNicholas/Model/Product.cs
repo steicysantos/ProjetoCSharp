@@ -52,14 +52,13 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
     }
 
     public List<ProductDTO> getAll(){
-        return this.ProductDTO;
+        return this.productDTO;
     }
 
     public ProductDTO convertModelToDTO(){
         var productDTO = new ProductDTO();
         productDTO.name = this.name;
         productDTO.bar_code = this.bar_code;
-        productDTO.store = this.store.convertModelToDTO();
         return productDTO;
     }
 

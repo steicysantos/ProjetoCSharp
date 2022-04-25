@@ -62,3 +62,9 @@ C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DAO\obj\Debug\net6.0
 C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DAO\obj\Debug\net6.0\DAO.dll
 C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DAO\obj\Debug\net6.0\refint\DAO.dll
 C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DAO\obj\Debug\net6.0\DAO.pdb
+C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DAO\bin\Debug\net6.0\DAO.deps.json
+C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DAO\bin\Debug\net6.0\DAO.runtimeconfig.json
+C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DAO\bin\Debug\net6.0\DAO.dll
+C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DAO\bin\Debug\net6.0\DAO.pdb
+C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DAO\obj\Debug\net6.0\DAO.genruntimeconfig.cache
+C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DAO\obj\Debug\net6.0\ref\DAO.dll

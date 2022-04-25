@@ -11,7 +11,7 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
     private String CNPJ;
     private Owner owner;
     private List<Purchase> purchase=new List<Purchase>();
-    public List<StoreDTO> StoreDTO = new List<StoreDTO>();
+    public List<StoreDTO> storeDTO = new List<StoreDTO>();
     List<Purchase> purchases = new List<Purchase>();
     public Store(Owner owner){this.owner=owner;}
     public void addNewPurchase(Purchase purchase){
@@ -77,11 +77,11 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
     {
         var storeDTO = new StoreDTO();
 
-        StoreDTO.name = this.name;
+        storeDTO.name = this.name;
 
-        StoreDTO.CNPJ = this.CNPJ;
+        storeDTO.CNPJ = this.CNPJ;
 
-        StoreDTO.owner = this.owner.convertModelToDTO();
+        storeDTO.owner = this.owner.convertModelToDTO();
 
         foreach(var item in this.purchases){
             storeDTO.purchase.Add(item.convertModelToDTO());

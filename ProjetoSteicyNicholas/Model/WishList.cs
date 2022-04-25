@@ -23,7 +23,7 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
         wishlist.client =  Client.convertDTOToModel(obj.client);
 
         foreach(var item in obj.products){
-            wishList.listaProdutos.Add(Product.convertDTOToModel(item));
+            wishlist.listaProdutos.Add(Product.convertDTOToModel(item));
         }
         return wishlist;
     }
@@ -95,7 +95,9 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
 
         wishListDTO.client = this.client.convertModelToDTO();
 
-        wishListDTO.listaProdutos = this.listaProdutos;
+        foreach(var item in this.listaProdutos){
+            wishListDTO.products.Add(item.convertModelToDTO());
+        }
 
         return wishListDTO;
     }

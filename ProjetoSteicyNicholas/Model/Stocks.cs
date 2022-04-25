@@ -16,13 +16,14 @@ public class Stocks : IValidateDataObject, IDataController<StocksDTO, Stocks>
 
     private Product product;
 
+    public List<StocksDTO> stocksDTO = new List<StocksDTO>();
 
     public static Stocks convertDTOToModel(StocksDTO obj)
     {
         
         var stocks = new Stocks();
-        stocks.quantity(obj.quantity);
-        stocks.unitPrice(obj.unit_price);
+        stocks.setQuantity(obj.quantity);
+        stocks.setUnitPrice(obj.unit_price);
         stocks.store =  Store.convertDTOToModel(obj.store);
         stocks.product=Product.convertDTOToModel(obj.product);
 
@@ -41,28 +42,28 @@ public class Stocks : IValidateDataObject, IDataController<StocksDTO, Stocks>
 
     }
 
-    public int save()
-    {
-        var id = 0;
+    // public int save()
+    // {
+    //     var id = 0;
 
-        using(var context = new DAOContext())
-        {
-            var stocks = new DAO.stocks{
-                quantity = this.quantity,
-                unitPrice = this.unit_price,
-                store = this.store,
-                product = this.product
-            };
+    //     using(var context = new DAOContext())
+    //     {
+    //         var stocks = new DAO.stocks{
+    //             quantity = this.quantity,
+    //             unitPrice = this.unit_price,
+    //             store = this.store,
+    //             product = this.product
+    //         };
 
-            context.Stocks.Add(stocks);
+    //         context.Stocks.Add(stocks);
 
-            context.SaveChanges();
+    //         context.SaveChanges();
 
-            id = stocks.id;
+    //         id = stocks.id;
 
-        }
-         return id;
-    }
+    //     }
+    //      return id;
+    // }
 
     public void update(StocksDTO obj)
     {
@@ -89,9 +90,9 @@ public class Stocks : IValidateDataObject, IDataController<StocksDTO, Stocks>
 
         stocksDTO.unit_price = this.unit_price;
 
-        stocksDTO.store = this.store;
+        stocksDTO.store = this.store.convertModelToDTO();
 
-        stocksDTO.product = this.product;
+        stocksDTO.product = this.product.convertModelToDTO();
 
         return stocksDTO;
     }

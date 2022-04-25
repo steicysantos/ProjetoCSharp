@@ -25,25 +25,25 @@ public class DAOContext:DbContext
             entity.Property(e => e.city).IsRequired();
             entity.Property(e => e.state).IsRequired();
             entity.Property(e => e.country).IsRequired();
-            entity.Property(e => e.posteCode).IsRequired();
+            entity.Property(e => e.postal_code).IsRequired();
         });
 
         modelBuilder.Entity<Product>(entity =>
         {
             entity.HasKey(e => e.id);
             entity.Property(e => e.name).IsRequired();
-            entity.Property(e => e.barCode).IsRequired();
+            entity.Property(e => e.bar_code).IsRequired();
             entity.HasOne(d => d.store);
         });
 
         modelBuilder.Entity<Purchase>(entity =>
         {
             entity.HasKey(e => e.id);
-            entity.Property(e => e.datePurchase).IsRequired();
+            entity.Property(e => e.date_purchase).IsRequired();
             entity.Property(e => e.payment_type).IsRequired();
             entity.Property(e => e.purchase_status).IsRequired();
-            entity.Property(e => e.numberConfirmation).IsRequired();
-            entity.Property(e => e.numberNF).IsRequired();
+            entity.Property(e => e.number_confirmation).IsRequired();
+            entity.Property(e => e.number_nf).IsRequired();
             entity.HasOne(d => d.client);
             entity.HasOne(d => d.store);
             entity.HasOne(d => d.product);
@@ -53,7 +53,7 @@ public class DAOContext:DbContext
         {
             entity.HasKey(e => e.id);
             entity.Property(e => e.quantity).IsRequired();
-            entity.Property(e => e.unitPrice).IsRequired();
+            entity.Property(e => e.unit_price).IsRequired();
             entity.HasOne(d => d.store);
             entity.HasOne(d => d.product);
         });

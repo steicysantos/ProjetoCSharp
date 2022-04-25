@@ -96,3 +96,8 @@ S:\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\5 
 C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.dll
 C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\refint\Model.dll
 C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.pdb
+C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.csproj.AssemblyReference.cache
+C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.AssemblyInfoInputs.cache
+C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.AssemblyInfo.cs
+C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.csproj.CoreCompileInputs.cache
