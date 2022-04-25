@@ -10,7 +10,7 @@ public class Stocks : IValidateDataObject, IDataController<StocksDTO, Stocks>
 {
     private int quantity;
 
-    private Double unitPrice;
+    private Double unit_price;
 
     private Store store;
 
@@ -22,7 +22,7 @@ public class Stocks : IValidateDataObject, IDataController<StocksDTO, Stocks>
         
         var stocks = new Stocks();
         stocks.quantity(obj.quantity);
-        stocks.unitPrice(obj.unitPrice);
+        stocks.unitPrice(obj.unit_price);
         stocks.store =  Store.convertDTOToModel(obj.store);
         stocks.product=Product.convertDTOToModel(obj.product);
 
@@ -49,7 +49,7 @@ public class Stocks : IValidateDataObject, IDataController<StocksDTO, Stocks>
         {
             var stocks = new DAO.stocks{
                 quantity = this.quantity,
-                unitPrice = this.unitPrice,
+                unitPrice = this.unit_price,
                 store = this.store,
                 product = this.product
             };
@@ -87,7 +87,7 @@ public class Stocks : IValidateDataObject, IDataController<StocksDTO, Stocks>
 
         stocksDTO.quantity = this.quantity;
 
-        stocksDTO.unitPrice = this.unitPrice;
+        stocksDTO.unit_price = this.unit_price;
 
         stocksDTO.store = this.store;
 
@@ -101,9 +101,9 @@ public class Stocks : IValidateDataObject, IDataController<StocksDTO, Stocks>
         this.quantity = quantity;
     }
 
-    public void setUnitPrice(Double unitPrice)
+    public void setUnitPrice(Double unit_price)
     {
-        this.unitPrice = unitPrice;
+        this.unit_price = unit_price;
     }
 
     public void setStore(Store store)
@@ -124,7 +124,7 @@ public class Stocks : IValidateDataObject, IDataController<StocksDTO, Stocks>
 
     public Double getUnitPrice()
     {        
-        return this.unitPrice;
+        return this.unit_price;
     }
 
     public Store getStore()
