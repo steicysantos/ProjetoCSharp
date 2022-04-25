@@ -80,3 +80,6 @@ C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DTO\obj\Debug\net6.0
 C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DTO\obj\Debug\net6.0\DTO.pdb
 C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DTO\obj\Debug\net6.0\DTO.genruntimeconfig.cache
 C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DTO\obj\Debug\net6.0\ref\DTO.dll
+C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DTO\bin\Debug\net6.0\Enums.dll
+C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DTO\bin\Debug\net6.0\Enums.pdb
+C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DTO\obj\Debug\net6.0\DTO.csproj.CopyComplete

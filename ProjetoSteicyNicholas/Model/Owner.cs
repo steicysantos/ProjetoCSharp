@@ -42,7 +42,6 @@ public class Owner : Person,IValidateDataObject,IDataController<OwnerDTO, Owner>
             owner.setPhone(obj.phone);
             owner.setLogin(obj.login);
             owner.passwd=obj.passwd;
-            owner.document=obj.document;
             
             return owner;
     }
@@ -51,25 +50,55 @@ public class Owner : Person,IValidateDataObject,IDataController<OwnerDTO, Owner>
 
     }
 
-    // public int save()
+    public int save()
+    {
+        var id = 0;
+
+        using(var context = new DAOContext())
+        {
+            var owner = new DAO.Owner{
+                name = this.name,
+                date_of_birth = this.date_of_birth,
+                document = this.document,
+                email = this.email,
+                phone = this.phone,
+                login = this.login,
+                address = new DAO.Address{
+                    street = address.getStreet(),
+                    city = address.getCity(),
+                    state = address.getState(),
+                    country = address.getCountry(),
+                    postal_code = address.getPostalCode()
+                },
+                passwd = this.passwd
+            };
+
+            context.Owner.Add(owner);
+            context.SaveChanges();
+            id = owner.id;
+        }
+         return id;
+    }
+    // public int save(int owner)
     // {
     //     var id = 0;
 
     //     using(var context = new DAOContext())
     //     {
-    //         var client = new DAO.Client{
-    //             name = this.name,
-    //             date_of_birth = this.date_of_birth,
-    //             document = this.document,
-    //             email = this.email,
-    //             phone = this.phone,
-    //             login = this.login,
-    //             address = this.address
+          
+    //         var ownerDAO = context.Owner.Where(c => c.id == owner).Single();
+
+    //         var store = new DAO.Store{
+    //             Name = this.name,
+    //             CNPJ = this.CNPJ,
+    //             owner = ownerDAO
     //         };
 
-    //         context.Client.Add(client);
+    //         context.Store.Add(store);
+    //         context.Entry(store.owner).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
     //         context.SaveChanges();
-    //         id = client.id;
+
+    //         id = store.id;
 
     //     }
     //      return id;

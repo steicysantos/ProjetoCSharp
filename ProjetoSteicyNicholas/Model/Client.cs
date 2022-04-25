@@ -48,29 +48,35 @@ public class Client : Person, IValidateDataObject,IDataController<ClientDTO, Cli
 
     }
 
-    // public int save()
-    // {
-    //     var id = 0;
+    public int save()
+    {
+        var id = 0;
 
-    //     using(var context = new DAOContext())
-    //     {
-    //         var client = new DAO.Client{
-    //             name = this.name,
-    //             date_of_birth = this.date_of_birth,
-    //             document = this.document,
-    //             email = this.email,
-    //             phone = this.phone,
-    //             login = this.login,
-    //             address = this.address
-    //         };
+        using(var context = new DAOContext())
+        {
+            var client = new DAO.Client{
+                name = this.name,
+                date_of_birth = this.date_of_birth,
+                document = this.document,
+                email = this.email,
+                phone = this.phone,
+                login = this.login,
+                // address = new DAO.Address{
+                //     street = address.getStreet(),
+                //     city = address.getCity(),
+                //     state = address.getState(),
+                //     country = address.getCountry(),
+                //     postal_code = address.getPostalCode()
+                // },
+                passwd = this.passwd
+            };
 
-    //         context.Client.Add(client);
-    //         context.SaveChanges();
-    //         id = client.id;
-
-    //     }
-    //      return id;
-    // }
+            context.Client.Add(client);
+            context.SaveChanges();
+            id = client.id;
+        }
+         return id;
+    }
 
     public void update(ClientDTO obj){
 

@@ -151,7 +151,7 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
         return this.country;
     }
 
-    public String getPosteCode()
+    public String getPostalCode()
     {
         return this.postal_code;
     }

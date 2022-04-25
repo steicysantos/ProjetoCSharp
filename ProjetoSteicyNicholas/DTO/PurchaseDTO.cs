@@ -1,11 +1,13 @@
 namespace DTO;
+using Enums;
 public class PurchaseDTO{
     public DateTime date_purchase;
-    public int purchase_status;
-    public int payment_type;
+    public double purchase_value;
+    public PaymentEnum payment_type;
+    public PurchaseStatusEnum purchase_status;
     public String number_confirmation;
     public String number_nf;
     public List<ProductDTO> product = new List<ProductDTO>();
-    public List<StoreDTO> store = new List<StoreDTO>();
+    public StoreDTO store;
     public ClientDTO client;
 }

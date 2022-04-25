@@ -27,7 +27,11 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
         }
         return wishlist;
     }
-
+    public WishList(Client client){
+        this.client = client;
+    }
+    public WishList(){
+    }
 
     public Boolean validateObject()
     {
@@ -71,6 +75,24 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
     //     }
     //      return id;
     // }
+     public int save(string clientDoc, int prod)
+    {
+        var id = 0;
+
+        using(var context = new DAOContext())
+        {
+             var clientDAO = context.Client.Where(c => c.document == clientDoc).Single();
+            var wl = new DAO.WishList{
+                client = clientDAO
+            };
+
+            context.WishList.Add(wl);
+            context.Entry(wl.client).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
+            context.SaveChanges();
+            id = wl.id;
+        }
+         return id;
+    }
 
     public void update(WishListDTO obj)
     {
@@ -118,7 +140,7 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
         return this.client;
     }
 
-    public List<Product> getListaProdutos()
+    public List<Product> getProducts()
     {        
         return this.listaProdutos;
     }

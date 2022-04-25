@@ -724,6 +724,7 @@
       "DAO/1.0.0": {
         "dependencies": {
           "EntityFramework": "6.4.4",
+          "Enums": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.3"
         },
@@ -733,7 +734,8 @@
       },
       "DTO/1.0.0": {
         "dependencies": {
-          "EntityFramework": "6.4.4"
+          "EntityFramework": "6.4.4",
+          "Enums": "1.0.0"
         },
         "runtime": {
           "DTO.dll": {}

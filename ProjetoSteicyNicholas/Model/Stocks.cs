@@ -64,6 +64,27 @@ public class Stocks : IValidateDataObject, IDataController<StocksDTO, Stocks>
     //     }
     //      return id;
     // }
+    public int save(int store, int product, int qtd, double unit_price)
+    {
+        var id = 0;
+
+        using(var context = new DAOContext())
+        {
+            var stocks = new DAO.Stocks{
+                quantity = quantity,
+                unit_price = unit_price,
+                store = context.Store.Where(c => c.id == store).Single(),
+                product = context.Product.Where(c => c.id == product).Single()
+            };
+
+            context.Stock.Add(stocks);
+            context.Entry(stocks.store).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
+            context.Entry(stocks.product).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
+            context.SaveChanges();
+            id = stocks.id;
+        }
+         return id;
+    }
 
     public void update(StocksDTO obj)
     {

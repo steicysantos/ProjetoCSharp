@@ -8,6 +8,7 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
     private String name = "";
     private String bar_code = "";
     private Store store;
+    private double unit_price;
     
     public List<ProductDTO> productDTO = new List<ProductDTO>();
 
@@ -23,25 +24,23 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
 
     }
 
-    // public int save()
-    // {
-    //     var id = 0;
+    public int save()
+    {
+        var id = 0;
 
-    //     using(var context = new DAOContext())
-    //     {
-    //         var product = new DAO.Product{
-    //             name = this.name,
-    //             barCode = this.barCode,
-    //             store = this.store
-    //         };
+        using(var context = new DAOContext())
+        {
+            var product = new DAO.Product{
+                name = this.name,
+                bar_code = this.bar_code,
+            };
 
-    //         context.Product.Add(product);
-    //         context.SaveChanges();
-    //         id = product.id;
-
-    //     }
-    //      return id;
-    // }
+            context.Product.Add(product);
+            context.SaveChanges();
+            id = product.id;
+        }
+         return id;
+    }
 
     public void update(ProductDTO obj){
 
@@ -65,6 +64,10 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
     public String getName(){
         return name;
     }
+    public double getUnitprice()
+    {
+        return this.unit_price;
+    }
     public String getBarCode(){
         return bar_code;
     }
@@ -73,6 +76,9 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
     }
     public void setName(String name){
         this.name=name;
+    }
+    public void setUnitPrice(double unit_price){
+        this.unit_price=unit_price;
     }
     public void setBarCode(String bar_code){
         this.bar_code=bar_code;

@@ -33,28 +33,27 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
     {
 
     }
-    //  public int save()
-    // {
-    //     var id = 0;
+    public int save(int owner)
+    {
+        var id = 0;
 
-    //     using(var context = new DAOContext())
-    //     {
-    //         var ownerDAO = context.owner.Where(c => c.id == owner).Single();
-    //         var store = new DAO.Store{
-    //             name = this.name,
-    //             CNPJ = this.CNPJ,
-    //             owner = ownerDAO
-    //         };
+        using(var context = new DAOContext())
+        {
+            var ownerDAO = context.Owner.Where(c => c.id == owner).Single();
+            var store = new DAO.Store{
+                owner = ownerDAO,
+                Name = this.name,
+                CNPJ = this.CNPJ
+                //lista de purchase
+            };
 
-    //         context.Store.Add(store);
-
-    //         context.SaveChanges();
-
-    //         id = store.id;
-
-    //     }
-    //      return id;
-    // }
+            context.Store.Add(store);
+            context.Entry(store.owner).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
+            context.SaveChanges();
+            id = store.id;
+        }
+         return id;
+    }
 
     public void update(StoreDTO obj)
     {

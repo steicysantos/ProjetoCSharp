@@ -68,3 +68,6 @@ C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DAO\bin\Debug\net6.0
 C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DAO\bin\Debug\net6.0\DAO.pdb
 C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DAO\obj\Debug\net6.0\DAO.genruntimeconfig.cache
 C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DAO\obj\Debug\net6.0\ref\DAO.dll
+C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DAO\bin\Debug\net6.0\Enums.dll
+C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DAO\bin\Debug\net6.0\Enums.pdb
+C:\Users\disrct\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\DAO\obj\Debug\net6.0\DAO.csproj.CopyComplete
