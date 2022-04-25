@@ -9,11 +9,11 @@ using Enums;
 
 public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purchase>
 {
-    private DateTime datePurchase;
-    private int purchaseStatus;
-    private int paymentType;
-    private String numberConfirmation;
-    private String numberNF;
+    private DateTime date_purchase;
+    private int purchase_status;
+    private int payment_type;
+    private String number_confirmation;
+    private String number_nf;
     private List<Product> product=new List<Product>();
     
 
@@ -29,11 +29,11 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
         purchase.client =  Client.convertDTOToModel(obj.client);
         purchase.store =  Store.convertDTOToModel(obj.store);
         purchase.product=Product.convertDTOToModel(obj.product);
-        purchase.setDatePurchase(obj.datePurchase);
-        purchase.setPurchaseStatus(obj.purchaseStatus);
-        purchase.setPaymentType(obj.paymentType);
-        purchase.setNumberConfirmation(obj.numberConfirmation);
-        purchase.setNumberNF(obj.numberNF);
+        purchase.setDatePurchase(obj.date_purchase);
+        purchase.setPurchaseStatus(obj.purchase_status);
+        purchase.setPaymentType(obj.payment_type);
+        purchase.setNumberConfirmation(obj.number_confirmation);
+        purchase.setNumberNF(obj.number_nf);
 
         return purchase;
     }
@@ -56,11 +56,11 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
         using(var context = new DAOContext())
         {
             var purchase = new DAO.Purchase{
-                datepurchase = this.datepurchase,
-                purchaseStatus = this.purchaseStatus,
-                paymentType = this.paymentType,
-                numberConfirmation = this.numberConfirmation,
-                numberNF = this.numberNF,
+                date_purchase = this.date_purchase,
+                purchase_status = this.purchase_status,
+                payment_type = this.payment_type,
+                number_confirmation = this.number_confirmation,
+                number_nf = this.number_nf,
                 product = this.product,
                 store = this.store,
                 client = this.client
@@ -97,15 +97,15 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
     {
         var PurchaseDTO = new PurchaseDTO();
 
-        PurchaseDTO.datePurchase = this.datePurchase;
+        PurchaseDTO.date_purchase = this.date_purchase;
 
-        PurchaseDTO.purchaseStatus = this.purchaseStatus;
+        PurchaseDTO.purchase_status = this.purchase_status;
 
-        PurchaseDTO.paymentType = this.paymentType;
+        PurchaseDTO.payment_type = this.payment_type;
 
-        PurchaseDTO.numberConfirmation = this.numberConfirmation;
+        PurchaseDTO.number_confirmation = this.number_confirmation;
 
-        PurchaseDTO.numberNF = this.numberNF;
+        PurchaseDTO.number_nf = this.number_nf;
 
         PurchaseDTO.product = this.product;
 
@@ -116,29 +116,29 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
         return purchaseDTO;
     }
 
-    public void setDatePurchase(DateTime datepurchase)
+    public void setDatePurchase(DateTime date_purchase)
     {
-        this.datePurchase = datePurchase;
+        this.date_purchase = date_purchase;
     }
 
-    public void setPurchaseStatus(int purchaseStatus)
+    public void setPurchaseStatus(int purchase_status)
     {
-        this.purchaseStatus = purchaseStatus;
+        this.purchase_status = purchase_status;
     }
 
-    public void setPaymentType(int paymentType)
+    public void setPaymentType(int payment_type)
     {
-        this.paymentType = paymentType;
+        this.payment_type = payment_type;
     }
 
-    public void setNumberConfirmation(String numberConfirmation)
+    public void setNumberConfirmation(String number_confirmation)
     {
-        this.numberConfirmation = numberConfirmation;
+        this.number_confirmation = number_confirmation;
     }
 
-    public void setNumberNF(String numberNF)
+    public void setNumberNF(String number_nf)
     {
-        this.numberNF = numberNF;
+        this.number_nf = number_nf;
     }
     public void setProduct(String product)
     {
@@ -156,27 +156,27 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
 
     public DateTime getDatePurchase()
     {
-        return this.datePurchase;
+        return this.date_purchase;
     }
 
     public int getPurchaseStatus()
     {        
-        return this.purchaseStatus;
+        return this.purchase_status;
     }
 
     public int getPaymentType()
     {
-        return this.paymentType;
+        return this.payment_type;
     }
 
     public String getNumberConfirmation()
     {
-        return this.numberConfirmation;
+        return this.number_confirmation;
     }
 
     public String getNumberNF()
     {
-        return this.numberNF;
+        return this.number_nf;
     }
 
     public List<Product> getProduct()
