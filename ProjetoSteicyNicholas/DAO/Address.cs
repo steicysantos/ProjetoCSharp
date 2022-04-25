@@ -6,5 +6,5 @@ namespace DAO;
         public String city = "";
         public String state = "";
         public String country = "";
-        public String posteCode = "";
+        public String postal_code = "";
     }

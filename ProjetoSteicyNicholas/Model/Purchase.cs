@@ -29,11 +29,11 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
         purchase.client =  Client.convertDTOToModel(obj.client);
         purchase.store =  Store.convertDTOToModel(obj.store);
         purchase.product=Product.convertDTOToModel(obj.product);
-        purchase.setDatePurchase(obj.date_purchase);
-        purchase.setPurchaseStatus(obj.purchase_status);
-        purchase.setPaymentType(obj.payment_type);
-        purchase.setNumberConfirmation(obj.number_confirmation);
-        purchase.setNumberNF(obj.number_nf);
+        purchase.setDate_purchase(obj.date_purchase);
+        purchase.setPurchase_status(obj.purchase_status);
+        purchase.setPayment_type(obj.payment_type);
+        purchase.setNumber_confirmation(obj.number_confirmation);
+        purchase.setNumber_nf(obj.number_nf);
 
         return purchase;
     }
@@ -53,33 +53,22 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
     // {
     //     var id = 0;
 
-<<<<<<< HEAD
-        using(var context = new DAOContext())
-        {
-            var purchase = new DAO.Purchase{
-                date_purchase = this.date_purchase,
-                purchase_status = this.purchase_status,
-                payment_type = this.payment_type,
-                number_confirmation = this.number_confirmation,
-                number_nf = this.number_nf,
-                product = this.product,
-                store = this.store,
-                client = this.client
-            };
-=======
-    //     using(var context = new DAOContext())
-    //     {
-    //         var purchase = new DAO.Purchase{
-    //             datepurchase = this.datepurchase,
-    //             purchaseStatus = this.purchaseStatus,
-    //             paymentType = this.paymentType,
-    //             numberConfirmation = this.numberConfirmation,
-    //             numberNF = this.numberNF,
-    //             product = this.product,
-    //             store = this.store,
-    //             client = this.client
-    //         };
->>>>>>> d41497ce3d140a67a67cce2bd4959eb48d077bab
+
+        // using(var context = new DAOContext())
+        // {
+        //     var purchase = new DAO.Purchase{
+        //         date_purchase = this.date_purchase,
+        //         purchase_status = this.purchase_status,
+        //         payment_type = this.payment_type,
+        //         number_confirmation = this.number_confirmation,
+        //         number_nf = this.number_nf,
+        //         product = this.product,
+        //         store = this.store,
+        //         client = this.client
+        //     };
+
+
+
 
     //         context.Purchase.Add(purchase);
 
@@ -112,7 +101,6 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
     {
         var purchaseDTO = new PurchaseDTO();
 
-<<<<<<< HEAD
         PurchaseDTO.date_purchase = this.date_purchase;
 
         PurchaseDTO.purchase_status = this.purchase_status;
@@ -122,17 +110,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
         PurchaseDTO.number_confirmation = this.number_confirmation;
 
         PurchaseDTO.number_nf = this.number_nf;
-=======
-        purchaseDTO.datePurchase = this.datePurchase;
 
-        purchaseDTO.purchaseStatus = this.purchaseStatus;
-
-        purchaseDTO.paymentType = this.paymentType;
-
-        purchaseDTO.numberConfirmation = this.numberConfirmation;
-
-        purchaseDTO.numberNF = this.numberNF;
->>>>>>> d41497ce3d140a67a67cce2bd4959eb48d077bab
 
         purchaseDTO.product = this.product.convertModelToDTO();
 
