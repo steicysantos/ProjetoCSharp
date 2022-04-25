@@ -1,7 +1,7 @@
 namespace DTO;
 public class PurchaseDTO{
     public DateTime date_purchase;
-    public string purchase_status;
+    public int purchase_status;
     public int payment_type;
     public String number_confirmation;
     public String number_nf;

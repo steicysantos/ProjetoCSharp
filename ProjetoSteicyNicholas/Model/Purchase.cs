@@ -20,6 +20,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
     private Store store;
     private Client client;
 
+    public List<PurchaseDTO> purchaseDTO = new List<PurchaseDTO>();
     
 
 
@@ -27,8 +28,8 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
     {
         var purchase = new Purchase();
         purchase.client =  Client.convertDTOToModel(obj.client);
-        foreach(var item in this.product){
-            purchase.product.Add(item.convertDTOToModel());
+        foreach(var item in obj.product){
+            purchase.product.Add(Product.convertDTOToModel(item));
         }
         purchase.setDate_purchase(obj.date_purchase);
         purchase.setPurchase_status(obj.purchase_status);
@@ -94,7 +95,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
 
     public List<PurchaseDTO> getAll()
     {        
-        return this.PurchaseDTO;      
+        return this.purchaseDTO;      
     }
 
    
@@ -102,20 +103,21 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
     {
         var purchaseDTO = new PurchaseDTO();
 
-        PurchaseDTO.date_purchase = this.date_purchase;
+        purchaseDTO.date_purchase = this.date_purchase;
 
-        PurchaseDTO.purchase_status = this.purchase_status;
+        purchaseDTO.purchase_status = this.purchase_status;
 
-        PurchaseDTO.payment_type = this.payment_type;
+        purchaseDTO.payment_type = this.payment_type;
 
-        PurchaseDTO.number_confirmation = this.number_confirmation;
+        purchaseDTO.number_confirmation = this.number_confirmation;
 
-        PurchaseDTO.number_nf = this.number_nf;
+        purchaseDTO.number_nf = this.number_nf;
 
+        foreach(var item in this.product){
+            purchaseDTO.product.Add(item.convertModelToDTO());
+        }
 
-        purchaseDTO.product = this.product.convertModelToDTO();
-
-        purchaseDTO.store = this.store.convertModelToDTO();
+        // purchaseDTO.store = this.store.convertModelToDTO();
 
         purchaseDTO.client = this.client.convertModelToDTO();
 
@@ -146,7 +148,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
     {
         this.number_nf = number_nf;
     }
-    public void setProduct(String product)
+    public void setProduct(List<Product> product)
     {
         this.product = product;
     }
