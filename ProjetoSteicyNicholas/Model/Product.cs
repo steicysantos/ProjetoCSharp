@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Model;
 public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
     private String name = "";
-    private String barCode = "";
+    private String bar_code = "";
     private Store store;
     
     public List<ProductDTO> productDTO = new List<ProductDTO>();
@@ -15,7 +15,7 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
     {
         var product = new Product();
         product.setName(obj.name);
-        product.setBarCode(obj.barCode);
+        product.setBarCode(obj.bar_code);
         return product;
     }
 
@@ -58,7 +58,7 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
     public ProductDTO convertModelToDTO(){
         var productDTO = new ProductDTO();
         productDTO.name = this.name;
-        productDTO.barCode = this.barCode;
+        productDTO.bar_code = this.bar_code;
         productDTO.store = this.store.convertModelToDTO();
         return productDTO;
     }
@@ -67,7 +67,7 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
         return name;
     }
     public String getBarCode(){
-        return barCode;
+        return bar_code;
     }
     public Store getStore(){
         return store;
@@ -75,8 +75,8 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
     public void setName(String name){
         this.name=name;
     }
-    public void setBarCode(String barCode){
-        this.barCode=barCode;
+    public void setBarCode(String bar_code){
+        this.bar_code=bar_code;
     }
     public void setStore(Store store){
         this.store=store;
@@ -85,7 +85,7 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
     public bool validateObject()
     {
         if(this.name == null) return false;            
-        if(this.barCode == null) return false;             
+        if(this.bar_code == null) return false;             
         if(this.store == null) return false;      
         return true;
     }

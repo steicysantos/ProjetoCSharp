@@ -1,5 +1,5 @@
 namespace DTO;
 public class ProductDTO{
     public String name = "";
-    public String barCode = "";
+    public String bar_code = "";
 }

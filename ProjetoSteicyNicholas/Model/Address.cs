@@ -16,11 +16,11 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
 
     private String country;
 
-    private String posteCode;
+    private String postal_code;
 
     public List<AddressDTO> addressDTO = new List<AddressDTO>();
 
-    public Address(String street,String city, String state,String country , String posteCode){
+    public Address(String street,String city, String state,String country , String postal_code){
         this.street =  street;
 
         this.city = city;
@@ -29,12 +29,12 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
 
         this.country = country;
 
-        this.posteCode = posteCode;
+        this.postal_code = postal_code;
     }
 
     public static Address convertDTOToModel(AddressDTO obj)
     {
-        return new Address(obj.street, obj.city, obj.state, obj.country, obj.posteCode);
+        return new Address(obj.street, obj.city, obj.state, obj.country, obj.postal_code);
     }
 
 
@@ -59,7 +59,7 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
                 city = this.city,
                 state = this.state,
                 country = this.country,
-                posteCode = this.posteCode
+                postal_code = this.postal_code
             };
 
             context.Address.Add(address);
@@ -101,7 +101,7 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
 
         addressDTO.country = this.country;
 
-        addressDTO.posteCode = this.posteCode;
+        addressDTO.postal_code = this.postal_code;
 
         return addressDTO;
     }
@@ -126,9 +126,9 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
         this.country = country;
     }
 
-    public void setPostalCode(String posteCode)
+    public void setPostalCode(String postal_code)
     {
-        this.posteCode = posteCode;
+        this.postal_code = postal_code;
     }
 
     public String getStreet()
@@ -153,7 +153,7 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
 
     public String getPosteCode()
     {
-        return this.posteCode;
+        return this.postal_code;
     }
 
 }
