@@ -15,7 +15,7 @@ public class Client : Person, IValidateDataObject,IDataController<ClientDTO, Cli
         }
         return instance;
     }
-
+    public List<ClientDTO> clientDTO = new List<ClientDTO>();
     private Client(Address address):base(address){
         this.address = address;
     }
