@@ -15,8 +15,12 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
     private String numberConfirmation;
     private String numberNF;
     private List<Product> product=new List<Product>();
+    
+
     private Store store;
     private Client client;
+
+    
 
 
     public static Purchase convertDTOToModel(PurchaseDTO obj)
@@ -117,12 +121,12 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
         this.datePurchase = datePurchase;
     }
 
-    public void setPurchaseStatus(String purchaseStatus)
+    public void setPurchaseStatus(int purchaseStatus)
     {
         this.purchaseStatus = purchaseStatus;
     }
 
-    public void setPaymentType(String paymentType)
+    public void setPaymentType(int paymentType)
     {
         this.paymentType = paymentType;
     }
@@ -141,11 +145,11 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
         this.product = product;
     }
 
-    public void setStore(String store)
+    public void setStore(Store store)
     {
         this.store = store;
     }
-    public void setClient(String client)
+    public void setClient(Client client)
     {
         this.client = client;
     }

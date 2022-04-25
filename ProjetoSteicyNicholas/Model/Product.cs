@@ -9,6 +9,7 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
     private String barCode = "";
     private Store store;
     
+    public List<ProductDTO> productDTO = new List<ProductDTO>();
 
     public static Product convertDTOToModel(ProductDTO obj)
     {
