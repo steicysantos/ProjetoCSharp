@@ -9,7 +9,7 @@ using System.Threading;
 using Enums;
 namespace testesAutomatizados
 {
-
+    
     public class TestDAO 
     {
         [Test]
@@ -449,9 +449,7 @@ namespace testesAutomatizados
             int  dono = 1;
 
             foreach(var str in stores){
-
                 var storeModel = Model.Store.convertDTOToModel(str);               
-
                 if(storeModel.validateObject()){
                     id = storeModel.save(dono);
                 }
@@ -517,13 +515,13 @@ namespace testesAutomatizados
             var id = 0;
 
             foreach(var prod in produtos){
-
+                
                 var productModel = Model.Product.convertDTOToModel(prod);               
-
+                
                 if(productModel.validateObject()){
-
+                    
                     id = productModel.save();
-
+                    
                 }
 
                 Assert.That(id, Is.Not.EqualTo(0));
@@ -567,7 +565,7 @@ namespace testesAutomatizados
                     var cliente = context.Client.Where(c=> c.id == client).Single();
                     for(int product = 1; product<5;product++){
                         var wishList = new Model.WishList();
-
+                        Console.WriteLine(cliente.document);
                         id = wishList.save(cliente.document, product);
 
                         Assert.That(id, Is.Not.EqualTo(0));
@@ -629,7 +627,21 @@ namespace testesAutomatizados
 
             storeDTO1.CNPJ = "52647825458";      
 
+            var addressDTO5  =  new AddressDTO();
+
+            addressDTO5.street = "rua cliente 1";
+
+            addressDTO5.state = "estado cliente 1";
+
+            addressDTO5.city  = "cidade cliente 1";
+
+            addressDTO5.country = "pais cliente 1";
+
+            addressDTO5.postal_code = "12cliente5";
+
             var clientDTO5 = new ClientDTO();
+
+            clientDTO5.address=addressDTO5;
 
             clientDTO5.name = "Beatriz Silva";
 
@@ -654,6 +666,7 @@ namespace testesAutomatizados
             if(purchase.validateObject()){
                 id=purchase.save();
             }
+            Assert.That(id, Is.Not.EqualTo(0));
         }
 
         

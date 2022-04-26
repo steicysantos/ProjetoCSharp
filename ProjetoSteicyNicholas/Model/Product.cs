@@ -7,8 +7,7 @@ namespace Model;
 public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
     private String name = "";
     private String bar_code = "";
-    private Store store;
-    private double unit_price;
+
     
     public List<ProductDTO> productDTO = new List<ProductDTO>();
 
@@ -32,7 +31,7 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
         {
             var product = new DAO.Product{
                 name = this.name,
-                bar_code = this.bar_code,
+                bar_code = this.bar_code
             };
 
             context.Product.Add(product);
@@ -64,34 +63,21 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
     public String getName(){
         return name;
     }
-    public double getUnitprice()
-    {
-        return this.unit_price;
-    }
+
     public String getBarCode(){
         return bar_code;
-    }
-    public Store getStore(){
-        return store;
     }
     public void setName(String name){
         this.name=name;
     }
-    public void setUnitPrice(double unit_price){
-        this.unit_price=unit_price;
-    }
     public void setBarCode(String bar_code){
         this.bar_code=bar_code;
-    }
-    public void setStore(Store store){
-        this.store=store;
     }
 
     public bool validateObject()
     {
         if(this.name == null) return false;            
-        if(this.bar_code == null) return false;             
-        if(this.store == null) return false;      
+        if(this.bar_code == null) return false;               
         return true;
     }
 }

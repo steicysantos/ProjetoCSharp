@@ -28,10 +28,6 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
     {
         var purchase = new Purchase();
         purchase.client =  Client.convertDTOToModel(obj.client);
-        purchase.setStore(Store.convertDTOToModel(obj.store));
-        foreach(var item in obj.product){
-            purchase.product.Add(Product.convertDTOToModel(item));
-        }
         purchase.setDate_purchase(obj.date_purchase);
         purchase.setPurchase_status(obj.purchase_status);
         purchase.payment_type=obj.payment_type;
@@ -90,12 +86,20 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
 
         using(var context = new DAOContext())
         {
+            var clientDAO =  context.Client.FirstOrDefault(c => c.id == 1);
+            var storeDAO = context.Store.FirstOrDefault(s =>s.id ==1);
+            var productsDAO = context.Product.Where(p => p.id == 1).Single();
+
+
             var purchase = new DAO.Purchase{
                 date_purchase = this.date_purchase,
                 number_confirmation = this.number_confirmation,
                 number_nf = this.number_nf,
                 payment_type = this.payment_type,
-                purchase_status = this.purchase_status
+                purchase_status = this.purchase_status,
+                store=storeDAO,
+                client=clientDAO,
+                product=productsDAO
             };
 
             context.Purchase.Add(purchase);

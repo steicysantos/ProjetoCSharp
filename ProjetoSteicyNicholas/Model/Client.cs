@@ -40,6 +40,7 @@ public class Client : Person, IValidateDataObject,IDataController<ClientDTO, Cli
             client.setEmail(obj.email);
             client.setPhone(obj.phone);
             client.setLogin(obj.login);
+            client.setPasswd(obj.passwd);
             
             return client;
     }
@@ -54,22 +55,23 @@ public class Client : Person, IValidateDataObject,IDataController<ClientDTO, Cli
 
         using(var context = new DAOContext())
         {
-            var client = new DAO.Client{
-                name = this.name,
-                date_of_birth = this.date_of_birth,
-                document = this.document,
-                email = this.email,
-                phone = this.phone,
-                login = this.login,
-                // address = new DAO.Address{
-                //     street = address.getStreet(),
-                //     city = address.getCity(),
-                //     state = address.getState(),
-                //     country = address.getCountry(),
-                //     postal_code = address.getPostalCode()
-                // },
-                passwd = this.passwd
-            };
+            
+            var addressDAO = new DAO.Address{
+                    street = this.address.getStreet(),
+                    city = this.address.getCity(),
+                    state = this.address.getState(),
+                    country = this.address.getCountry(),
+                    postal_code = this.address.getPostalCode(),
+                };
+            var client = new DAO.Client();
+                client.name = this.name;
+                client.date_of_birth = this.date_of_birth;
+                client.document = this.document;
+                client.email = this.email;
+                client.phone = this.phone;
+                client.login = this.login;
+                client.address=addressDAO;
+                client.passwd = this.getPasswd();
 
             context.Client.Add(client);
             context.SaveChanges();

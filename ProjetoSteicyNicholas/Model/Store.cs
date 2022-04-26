@@ -17,10 +17,12 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
     public void addNewPurchase(Purchase purchase){
         purchases.Add(purchase);
     }
+    public Store(){
 
+    }
     public static Store convertDTOToModel(StoreDTO obj)
     {
-        var store = new Store(Owner.convertDTOToModel(obj.owner));
+        var store = new Store();
         store.setName(obj.name);
         store.setCNPJ(obj.CNPJ);        
         foreach(var item in obj.purchase){
@@ -117,9 +119,7 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
     public bool validateObject()
     {
         if(this.name == null) return false;
-        if(this.CNPJ == null) return false;            
-        if(this.owner == null) return false;             
-        if(this.purchase == null) return false;      
+        if(this.CNPJ == null) return false;               
         return true;
     }
 }

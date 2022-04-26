@@ -81,13 +81,13 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
 
         using(var context = new DAOContext())
         {
-             var clientDAO = context.Client.Where(c => c.document == clientDoc).Single();
+            var clientDAO = context.Client.FirstOrDefault(c => c.document == clientDoc);
+            var productDAO = context.Product.Where(c => c.id == prod).Single();
             var wl = new DAO.WishList{
-                client = clientDAO
+                client = clientDAO,
+                product=productDAO
             };
-
             context.WishList.Add(wl);
-            context.Entry(wl.client).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
             context.SaveChanges();
             id = wl.id;
         }
