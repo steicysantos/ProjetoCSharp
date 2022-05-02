@@ -1,12 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "F+dtDfUrdvBDcF1TQF2QHIYHmtKz0PMC6xeZlHdNfkTLvPBIGptfMcQSR/9qZLbvEqo3Gp9tePNuumzHO06gpw==",
-=======
-  "dgSpecHash": "6MOkt0TGeQQMxPrWzIm7IqHAaT3EUKMoOhWAezpE/TXOsCScVXbXexal2dbAFMruJ+h/aLKjKvG9Ew4n/UoAlA==",
->>>>>>> 871e1dc82f9222cac344461a85a9490b74738325
   "success": true,
-  "projectFilePath": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\4 - Programador WEB 2\\5 - Desenvolvimento de Sistemas\\1 - Alunos\\Steicy Santos\\ProjetoC#\\ProjetoCSharp\\ProjetoSteicyNicholas\\Controller\\Controller.csproj",
+  "projectFilePath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Controller\\Controller.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\disrct\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\disrct\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.4\\microsoft.aspnetcore.jsonpatch.6.0.4.nupkg.sha512",
@@ -79,5 +75,12 @@
     "C:\\Users\\disrct\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
     "C:\\Users\\disrct\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Controller\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
