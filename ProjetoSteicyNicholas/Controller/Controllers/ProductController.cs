@@ -10,11 +10,17 @@
 //     public void allProducts(){
 
 //     }
-
-//     [HttpPatch(Name = "createProduct")]
-//     public Product createProduct(ProductDTO product){
-
-//     }
+    //  [HttpPost]
+    // [Route("register")]
+    // public object registerProduct(ProductDTO product){
+    //     var productModel = Model.Product.convertDTOToModel(product);
+    //     var id = productModel.save();
+    //     return new{
+    //         nome = product.name,
+    //         codigoBarra = product.bar_code,
+    //         id = id
+    //     };
+    // }
 
 //     [HttpDelete(Name = "deleteProduct")]
 //     public Product deleteProduct(ProductDTO product){
