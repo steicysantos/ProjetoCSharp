@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QN/mUF6MWuhttyjp7kZCBI6C+HGBGxR6tr9fBBCg39vKx6qUXxNsRqMocY+pnU+6bb0Eiahi7UBfG1I10zkyIQ==",
+  "dgSpecHash": "xwpO83B0UP1Qm758D7I9YZ3HUjPFo37rwcpCoBVlLyw8teTGrARPo6GHiJ1ifvb7/FuEjyUw0DPF98X8nsn8ow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DAO\\DAO.csproj",
+  "projectFilePath": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\4 - Programador WEB 2\\5 - Desenvolvimento de Sistemas\\1 - Alunos\\Steicy Santos\\ProjetoC#\\ProjetoCSharp\\ProjetoSteicyNicholas\\DAO\\DAO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\disrct\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\disrct\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

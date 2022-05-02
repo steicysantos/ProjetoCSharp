@@ -3,7 +3,6 @@ using Model;
 using DTO;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Controller.Controllers;
 
 [ApiController]
 [Route("address")]
