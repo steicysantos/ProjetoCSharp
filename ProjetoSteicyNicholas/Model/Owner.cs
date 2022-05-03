@@ -116,6 +116,23 @@ public class Owner : Person,IValidateDataObject,IDataController<OwnerDTO, Owner>
         return this.ownerDTO;
     }
 
+    public static object find(String document){
+        using (var context = new DAOContext()){
+
+            var OwnerDAO=context.Owner.Include(i=>i.address).FirstOrDefault(e=>e.document==document);
+
+            return new {
+                name=OwnerDAO.name,
+                email=OwnerDAO.email,
+                passwd=OwnerDAO.passwd,
+                date_of_birth=OwnerDAO.date_of_birth,
+                phone=OwnerDAO.phone,
+                login=OwnerDAO.login,
+                address=OwnerDAO.address,
+            };
+        }
+    }
+
     public OwnerDTO convertModelToDTO(){
         var ownerDTO = new OwnerDTO();
         ownerDTO.name = this.name;

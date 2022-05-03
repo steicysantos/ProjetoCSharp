@@ -26,8 +26,11 @@ public class ClientController : ControllerBase
             id=id
         };
     }
-    [HttpGet(Name = "getInformations")]
-    public void getInformations()
+    [HttpGet]
+    [Route("get/{document}")]
+    public object getInformations(string document)
     {
+        var client=Model.Client.find(document);
+        return client;
     }
 }

@@ -3,6 +3,7 @@ using Interfaces;
 using DAO;
 using DTO;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 
 namespace Model;
 
@@ -88,6 +89,23 @@ public class Client : Person, IValidateDataObject,IDataController<ClientDTO, Cli
         return new ClientDTO();
     }
 
+    public static object find(String document){
+        using (var context = new DAOContext()){
+
+            var ClientDAO=context.Client.Include(i=>i.address).FirstOrDefault(e=>e.document==document);
+
+            return new {
+                name=ClientDAO.name,
+                email=ClientDAO.email,
+                passwd=ClientDAO.passwd,
+                date_of_birth=ClientDAO.date_of_birth,
+                phone=ClientDAO.phone,
+                login=ClientDAO.login,
+                address=ClientDAO.address,
+            };
+        }
+    }
+
     public List<ClientDTO> getAll(){
         return this.clientDTO;
     }
@@ -104,6 +122,19 @@ public class Client : Person, IValidateDataObject,IDataController<ClientDTO, Cli
         return clientDTO;
     }
 
+    // public static Client convertDAOToModel(DAO.Client obj){
+    //     var client = new Client();
+        
+    //     client.setDocument(obj.document);
+    //     client.setName(obj.name);
+    //     client.setDateOfBirth(obj.date_of_birth);
+    //     client.setEmail(obj.email);
+    //     client.setPhone(obj.phone);
+    //     client.setLogin(obj.login);
+    //     client.setPassword(obj.password);
+    //     client.address = Address.convertDAOToModel(obj.address);
 
+    //     return client;
+    // }
 
 }
