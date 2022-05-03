@@ -1,24 +1,29 @@
-using System;
+using Microsoft.AspNetCore.Mvc;
 using Model;
 using DTO;
-using Microsoft.AspNetCore.Mvc;
-
 namespace Controller.Controllers;
 
+
 [ApiController]
-[Route("store")]
-public class StoreController : ControllerBase{
+[Route("stock")]
+public class StockController : ControllerBase
+{
     [HttpPost]
     [Route("register")]
-    public object registerStore(StoreDTO store){
-        var storeModel = Model.Store.convertDTOToModel(store);
-        var id = storeModel.save();
+    public object registerOwner(StocksDTO stocks)
+    {
+        var stockk=Model.Stocks.convertDTOToModel(stocks);
+        var id=stockk.save(1,1,1,1);
         return new{
-            name = store.name,
-            cnpj = store.CNPJ,
-            listPurchase = store.purchase,
-            owner = store.owner,
-            id = id
+            quantity = stocks.quantity,
+            unit_price = stocks.unit_price,
+            store = stocks.store,
+            product = stocks.product,
+            id=id
         };
     }
+    // [HttpGet(Name = "getInformations")]
+    // public void getInformations()
+    // {
+    // } ""
 }
