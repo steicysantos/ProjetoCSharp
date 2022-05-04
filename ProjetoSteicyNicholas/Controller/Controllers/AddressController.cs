@@ -23,8 +23,5 @@ public class AddressController:ControllerBase{
             codigoPostal=address.postal_code,
             id=id
         };
-    }
-    
-
-    
+    }    
 }

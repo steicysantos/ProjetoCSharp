@@ -6,24 +6,15 @@ namespace Controller.Controllers;
 
 [ApiController]
 [Route("stock")]
-public class StockController : ControllerBase
-{
+
+public class StockController : ControllerBase{
     [HttpPost]
-    [Route("register")]
-    public object registerOwner(StocksDTO stocks)
-    {
-        var stockk=Model.Stocks.convertDTOToModel(stocks);
-        var id=stockk.save(1,1,1,1);
-        return new{
-            quantity = stocks.quantity,
-            unit_price = stocks.unit_price,
-            store = stocks.store,
-            product = stocks.product,
-            id=id
-        };
+    public void addProductToStock(Object request){
+
     }
-    // [HttpGet(Name = "getInformations")]
-    // public void getInformations()
-    // {
-    // } ""
+
+    [HttpPut]
+    public void updateStock(Object request){
+
+    }
 }
