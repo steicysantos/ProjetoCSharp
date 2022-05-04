@@ -8,15 +8,19 @@ namespace Controller.Controllers;
 public class PurchaseController : ControllerBase
 {
 
-    // [HttpGet(Name = "getClientPurchase")]
-    // public Client getClientPurchase(int clientId){
+    [HttpGet]
+    [Route("getClient/{clientID}")]
+    public object getClientPurchase(int clientID){
+        var clientPurchase = Model.Purchase.getClientPurchases(clientID);
+        return clientPurchase;
+    }
 
-    // }
-
-    // [HttpGet(Name = "getStorePurchase")]
-    // public Store getStorePurchase(int clientId){
-        
-    // }
+    [HttpGet]
+    [Route("getStore/{storeID}")]
+    public object getStorePurchase(int storeID){
+        var storePurchase = Model.Purchase.getStorePurchases(storeID);
+        return storePurchase;
+    }
 
     [HttpPost]
     [Route("make")]
