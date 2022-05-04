@@ -3,6 +3,7 @@ using Interfaces;
 using DAO;
 using DTO;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 namespace Model;
 
 public class Owner : Person,IValidateDataObject,IDataController<OwnerDTO, Owner>{

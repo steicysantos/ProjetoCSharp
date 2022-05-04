@@ -46,4 +46,11 @@ public class StoreController : ControllerBase{
             id = id
         };
     }
+
+    [HttpGet]
+    [Route("getStore/{CNPJ}")]
+    public static object getStoreInfo(string CNPJ){
+        var store=Model.Store.find(CNPJ);
+        return store;
+    }
 }

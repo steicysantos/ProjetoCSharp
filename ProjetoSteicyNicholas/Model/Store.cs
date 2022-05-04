@@ -3,6 +3,7 @@ using Interfaces;
 using DAO;
 using DTO;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 namespace Model;
 
 public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
@@ -73,6 +74,18 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
         return this.storeDTO;      
     }
 
+    public static object find(string cnpj){
+        using (var context = new DAOContext()){
+
+            var StoreDAO=context.Store.Include(i=>i.owner).Include(i=>i.owner.address).FirstOrDefault(e=>e.CNPJ==cnpj);
+
+            return new {
+                name=StoreDAO.Name,
+                CNPJ=StoreDAO.CNPJ,
+                owner=StoreDAO.owner
+            };
+        }
+    }
    
     public StoreDTO convertModelToDTO()
     {
