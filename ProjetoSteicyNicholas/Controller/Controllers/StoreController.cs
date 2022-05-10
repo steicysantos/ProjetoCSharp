@@ -48,9 +48,16 @@ public class StoreController : ControllerBase{
     }
 
     [HttpGet]
+    [Route("getAll")]
+    public object getAllStores(){
+        var stores=Model.Store.getStores();
+        return stores;
+    }
+
+    [HttpGet]
     [Route("getStore/{CNPJ}")]
-    public static object getStoreInfo(string CNPJ){
-        var store=Model.Store.find(CNPJ);
+    public object getStoreInformation(string CNPJ){
+        var store=Model.Store.getStoreInfo(CNPJ);
         return store;
     }
 }

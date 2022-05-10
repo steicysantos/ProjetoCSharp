@@ -20,4 +20,11 @@ public class ProductController : ControllerBase
             id = id
         };
     }
+
+    [HttpGet]
+        [Route("getAll")]
+        public object allProduct(){
+                var produtos = Model.Product.getProducts();
+                return produtos; 
+        }
 }
