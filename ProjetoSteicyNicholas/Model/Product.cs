@@ -41,10 +41,27 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
          return id;
     }
 
-    public void update(ProductDTO obj){
+     public static void update(ProductDTO productDTO)
+    {
+        using (var context = new DAOContext()){
+            var product = context.Product.FirstOrDefault(a => a.bar_code == productDTO.bar_code);
 
+            if(product != null){
+                if(productDTO.name != null){
+                    product.name = productDTO.name;
+                }
+            }
+            context.SaveChanges();
+        }
     }
 
+    public static int find(ProductDTO productDTO){
+        using (var context = new DAOContext()){
+            var produto = context.Product.FirstOrDefault(s => s.bar_code == productDTO.bar_code);
+
+            return produto.id;
+        }
+    }
     public ProductDTO findById(int id){
         return new ProductDTO();
     }
@@ -100,6 +117,13 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
 
             context.Product.Remove(produto);
             context.SaveChanges();
+        }
+    }
+
+    public static int findId(string bar_code){
+        using(var context = new DAOContext()){
+            var product = context.Product.FirstOrDefault(s => s.bar_code == bar_code);
+            return product.id;
         }
     }
 }

@@ -1,23 +1,22 @@
 using Microsoft.AspNetCore.Mvc;
-using Model;
 using DTO;
+
 namespace Controller.Controllers;
 
-
 [ApiController]
-[Route("[controller]")]
+[Route("stock")]
 
 public class StockController : ControllerBase{
     [HttpPost]
-    [Route("register")]
-    public object addProductToStock(StocksDTO stocks)
-    {
-        var stockModel = Stock.convertDTOToModel(stocks);
-        var storeId = storeId.findId(stockModel.getStore().getCNPJ());
-        var productId = Product.findId(stockModel.gsetProduct().getCNPJ());
-        var id = stockModel.save(storeId, productId, stockModel.getQuantity(), stockModel.getUnit_price());
-        return new
-        {
+    [Route("add")]
+    public object addProductToStock([FromBody] StocksDTO stocks){
+        var stockModel = Model.Stocks.convertDTOToModel(stocks);
+        var storeId = Model.Store.findId(stockModel.getStore().getCNPJ());
+        var productId = Model.Product.findId(stockModel.getProduct().getBarCode());
+        
+        var id = stockModel.save(storeId, productId, stockModel.getQuantity(), stockModel.getUnitPrice());
+
+        return new{
             id = id,
             quantity = stocks.quantity,
             unit_price = stocks.unit_price,
@@ -28,15 +27,12 @@ public class StockController : ControllerBase{
 
     [HttpPut]
     [Route("update")]
-    public void updateStock(Object request){
-
-    }
-
-    [HttpDelete]
-    [Route("delete")]
-    public void deleteStock([FromBody] StocksDTO stocks)
-    {
-        var stockModel = stocks.convertDTOToModel(stocks);
-        stockModel.delete();
-    }
+    public Object update([FromBody]StocksDTO stocksDTO){
+        var stockk = new Model.Stocks();
+        stockk.update(stocksDTO);
+        return new{
+            status = "ok",
+            mensagem = "deu boa"
+        };
+    }   
 }

@@ -38,9 +38,15 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
         return true;
     }
 
-    public void delete(WishListDTO obj)
-    {
+    public void delete(){
+        using (var context = new DAOContext()){
 
+            foreach(var prod in this.listaProdutos){
+                var client = context.WishList.FirstOrDefault(i => i.client.document == this.client.getDocument() && i.product.bar_code == prod.getBarCode());
+                context.WishList.Remove(client);
+                context.SaveChanges();
+                } 
+        }
     }
 
     // public int save()

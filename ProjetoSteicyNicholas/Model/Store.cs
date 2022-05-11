@@ -146,4 +146,10 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
         if(this.CNPJ == null) return false;               
         return true;
     }
+    public static int findId(string CNPJ){
+        using(var context = new DAOContext()){
+            var store = context.Store.FirstOrDefault(s => s.CNPJ == CNPJ);
+            return store.id;
+        }
+    }
 }

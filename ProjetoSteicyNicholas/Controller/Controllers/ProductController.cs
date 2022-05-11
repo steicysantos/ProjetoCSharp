@@ -29,15 +29,23 @@ public class ProductController : ControllerBase
         }
 
     [HttpDelete]
-        [Route("delete")]
-        public object deleteProduct([FromBody]ProductDTO productDTO){
-                var produto = Model.Product.convertDTOToModel(productDTO);
-                produto.delete();
+    [Route("delete")]
+    public object deleteProduct([FromBody]ProductDTO productDTO){
+            var produto = Model.Product.convertDTOToModel(productDTO);
+            produto.delete();
 
-                return new {
-                        status = "ok",
-                        mensagem = "excluido"
-                };
-
+            return new {
+                    status = "ok",
+                    mensagem = "excluido"
+            };
+    }
+    [HttpPut]
+    [Route("update")]
+    public Object updateProduct([FromBody] ProductDTO productDTO){
+        Model.Product.update(productDTO);
+        return new{
+                status = "ok",
+                mensagem = "deu boa"
+        };
         }
 }

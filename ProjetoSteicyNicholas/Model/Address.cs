@@ -20,6 +20,9 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
 
     public List<AddressDTO> addressDTO = new List<AddressDTO>();
 
+    public Address(){
+        
+    }
     public Address(String street,String city, String state,String country , String postal_code){
         this.street =  street;
 
@@ -43,9 +46,13 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
         return true;
     }
 
-    public void delete(AddressDTO obj)
+    public static void delete(AddressDTO addressDTO)
     {
-
+        using (var context = new DAOContext()){
+            var address = context.Address.FirstOrDefault(a => a.id == addressDTO.id);
+            context.Remove(address);
+            context.SaveChanges();
+        }
     }
 
     public int save()
@@ -72,9 +79,30 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
          return id;
     }
 
-    public void update(AddressDTO obj)
+    public void update(AddressDTO addressDTO)
     {
+         using (var context = new DAOContext()){
+            var address = context.Address.FirstOrDefault(a => a.id == addressDTO.id);
 
+            if(address != null){
+                if(addressDTO.street != null){
+                    address.street = addressDTO.street;
+                }
+                if(addressDTO.city != null){
+                    address.city = addressDTO.city;
+                }
+                if(addressDTO.state != null){
+                    address.state = addressDTO.state;
+                }
+                if(addressDTO.country != null){
+                    address.country = addressDTO.country;
+                }
+                if(addressDTO.postal_code != null){
+                    address.postal_code = addressDTO.postal_code;
+                }
+            }
+            context.SaveChanges();
+        }
     }
 
     public AddressDTO findById(int id)
@@ -155,5 +183,7 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
     {
         return this.postal_code;
     }
+
+    
 
 }

@@ -23,5 +23,19 @@ public class AddressController:ControllerBase{
             codigoPostal=address.postal_code,
             id=id
         };
+    }
+
+    [HttpDelete]
+    [Route("remove")]
+    public void removeAddress(AddressDTO address){
+
+        Model.Address.delete(address);
+    }
+
+    [HttpPut]
+    [Route("update")]
+    public void updateAddress([FromBody]AddressDTO address){
+        var addresss = new Model.Address();
+        addresss.update(address);
     }    
 }
