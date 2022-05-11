@@ -80,4 +80,26 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
         if(this.bar_code == null) return false;               
         return true;
     }
+    public static List<object> getProducts()
+    {
+        using(var context = new DAOContext()){
+            var products = context.Product;
+
+            List<object> produtos = new List<object>();
+            foreach(var product in products){
+                produtos.Add(product);
+            }
+
+            return produtos;
+        }
+    }
+    public void delete()
+    {
+        using (var context = new DAOContext()){
+            var produto = context.Product.FirstOrDefault(i => i.bar_code == this.bar_code );
+
+            context.Product.Remove(produto);
+            context.SaveChanges();
+        }
+    }
 }

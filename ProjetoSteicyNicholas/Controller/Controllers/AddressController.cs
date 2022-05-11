@@ -15,7 +15,7 @@ public class AddressController:ControllerBase{
 
         var addres=Model.Address.convertDTOToModel(address);
         var id=addres.save();
-        return new{
+        return new{ 
             rua=address.street,
             estado=address.state,
             cidade=address.city,

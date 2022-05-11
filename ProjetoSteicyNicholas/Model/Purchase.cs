@@ -3,6 +3,7 @@ using Interfaces;
 using DAO;
 using DTO;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 
 namespace Model;
 using Enums;
@@ -112,6 +113,41 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
     public void update(PurchaseDTO obj)
     {
 
+    }
+
+    public static List<object> getStorePurchases(int storeID){
+        using(var context = new DAOContext()){
+            var storePurchase = context.Purchase
+            .Include(s => s.store)
+            .Include(o => o.store.owner)
+            .Include(a => a.store.owner.address)
+            .Include(p => p.product)
+            .Include(c => c.client)
+            .Include(a => a.client.address)
+            .Where(p => p.store.id == storeID);
+             List<object> compras = new List<object>();
+             foreach(var compra in storePurchase){
+                 compras.Add(compra);
+             }
+            return compras;
+        }
+    }
+
+     public static List<object> getClientPurchases(int clientID){
+        using(var context = new DAOContext()){
+            var storePurchase = context.Purchase
+            .Include(s => s.store)
+            .Include(o => o.store.owner)
+            .Include(a => a.store.owner.address)
+            .Include(p => p.product)
+            .Include(a => a.client.address)
+            .Where(p => p.client.id == clientID);
+             List<object> compras = new List<object>();
+             foreach(var compra in storePurchase){
+                 compras.Add(compra);
+             }
+            return compras;
+        }
     }
 
     public PurchaseDTO findById(int id)

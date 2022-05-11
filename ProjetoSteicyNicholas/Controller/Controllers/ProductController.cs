@@ -27,4 +27,17 @@ public class ProductController : ControllerBase
                 var produtos = Model.Product.getProducts();
                 return produtos; 
         }
+
+    [HttpDelete]
+        [Route("delete")]
+        public object deleteProduct([FromBody]ProductDTO productDTO){
+                var produto = Model.Product.convertDTOToModel(productDTO);
+                produto.delete();
+
+                return new {
+                        status = "ok",
+                        mensagem = "excluido"
+                };
+
+        }
 }

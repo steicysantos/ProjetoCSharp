@@ -74,16 +74,27 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
         return this.storeDTO;      
     }
 
-    public static object find(string cnpj){
+    public static object getStoreInfo(string cnpj){
         using (var context = new DAOContext()){
-
-            var StoreDAO=context.Store.Include(i=>i.owner).Include(i=>i.owner.address).FirstOrDefault(e=>e.CNPJ==cnpj);
-
+            
+            var storeDAO = context.Store.Include(s => s.owner).Include(s => s.owner.address).FirstOrDefault(p => p.CNPJ == cnpj);
+            Console.WriteLine(storeDAO.Name);
             return new {
-                name=StoreDAO.Name,
-                CNPJ=StoreDAO.CNPJ,
-                owner=StoreDAO.owner
+                name=storeDAO.Name,
+                CNPJ=storeDAO.CNPJ,
+                owner=storeDAO.owner
             };
+        }
+    }
+     public static List<object> getStores(){
+        using (var context = new DAOContext()){
+            var stores = context.Store.Include(s => s.owner);
+            List<object> lojas = new List<object>();
+            foreach(var store in stores){
+                lojas.Add(store);
+            }
+
+            return lojas;
         }
     }
    
