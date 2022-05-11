@@ -5,16 +5,38 @@ namespace Controller.Controllers;
 
 
 [ApiController]
-[Route("stock")]
+[Route("[controller]")]
 
 public class StockController : ControllerBase{
     [HttpPost]
-    public void addProductToStock(Object request){
-
+    [Route("register")]
+    public object addProductToStock(StocksDTO stocks)
+    {
+        var stockModel = Stock.convertDTOToModel(stocks);
+        var storeId = storeId.findId(stockModel.getStore().getCNPJ());
+        var productId = Product.findId(stockModel.gsetProduct().getCNPJ());
+        var id = stockModel.save(storeId, productId, stockModel.getQuantity(), stockModel.getUnit_price());
+        return new
+        {
+            id = id,
+            quantity = stocks.quantity,
+            unit_price = stocks.unit_price,
+            product = stocks.product,
+            store = stocks.store
+        };
     }
 
     [HttpPut]
+    [Route("update")]
     public void updateStock(Object request){
 
+    }
+
+    [HttpDelete]
+    [Route("delete")]
+    public void deleteStock([FromBody] StocksDTO stocks)
+    {
+        var stockModel = stocks.convertDTOToModel(stocks);
+        stockModel.delete();
     }
 }
