@@ -23,11 +23,20 @@ public class ProductController : ControllerBase
 
     [HttpGet]
         [Route("getAll")]
-        public object allProduct(){
+        public IActionResult allProduct(){
                 var produtos = Model.Product.getProducts();
-                return produtos; 
+                var result = new ObjectResult(produtos);
+                Response.Headers.Add("Access-Control-Allow-Origin", "*");
+                return result; 
         }
-
+    //     [HttpGet]
+    // [Route("get/{id}")]
+    // public IActionResult getProductById(int id){
+    //     var prod = Model.Product.find(id);
+    //      var result = new ObjectResult(prod);
+    //      Response.Headers.Add("Access-Control-Allow-Origin", "*");
+    //     return result;
+    // }
     [HttpDelete]
     [Route("delete")]
     public object deleteProduct([FromBody]ProductDTO productDTO){
