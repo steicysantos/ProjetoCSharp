@@ -122,6 +122,20 @@ public class Client : Person, IValidateDataObject,IDataController<ClientDTO, Cli
         return clientDTO;
     }
 
+    public static DAO.Client findByUser(String login, string password)
+    {
+        using (var context = new DAOContext())
+        {
+            var clientDAO = context.Client.FirstOrDefault(o => o.login == login && o.passwd==password);
+
+            if(clientDAO != null){
+
+                return clientDAO;
+            }
+
+            return null;
+        }
+    }
     // public static Client convertDAOToModel(DAO.Client obj){
     //     var client = new Client();
         

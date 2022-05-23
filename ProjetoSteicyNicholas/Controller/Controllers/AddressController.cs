@@ -2,6 +2,7 @@ using System;
 using Model;
 using DTO;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 
 [ApiController]
@@ -9,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 public class AddressController:ControllerBase{
 
+    [Authorize]
     [HttpPost]
     [Route("register")]
     public object registerAddress([FromBody] AddressDTO address){
