@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TkXHf61ckou3gdrMTg++GevOH4u1SPjnVBBbay6+/nvtl18lzIav2j5gBIXDoXxM4HIaWjOZZRDUnjLhlBKsVA==",
+  "dgSpecHash": "zVBmfjmDpAulvipsedhHnYQnJwgj4imU14tSOso/ehwlb1MNAztmuAtszFc7O8f0j2M934+rP4T8DmVP/C3avQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Controller\\Controller.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\disrct\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\disrct\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\disrct\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
+    "C:\\Users\\disrct\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\2.2.0\\microsoft.aspnetcore.authentication.jwtbearer.2.2.0.nupkg.sha512",
     "C:\\Users\\disrct\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\2.2.0\\microsoft.aspnetcore.cryptography.internal.2.2.0.nupkg.sha512",
     "C:\\Users\\disrct\\.nuget\\packages\\microsoft.aspnetcore.dataprotection\\2.2.0\\microsoft.aspnetcore.dataprotection.2.2.0.nupkg.sha512",
     "C:\\Users\\disrct\\.nuget\\packages\\microsoft.aspnetcore.dataprotection.abstractions\\2.2.0\\microsoft.aspnetcore.dataprotection.abstractions.2.2.0.nupkg.sha512",
