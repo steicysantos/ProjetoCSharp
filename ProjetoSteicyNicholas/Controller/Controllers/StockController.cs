@@ -1,12 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using DTO;
-
+using Microsoft.AspNetCore.Authorization;
 namespace Controller.Controllers;
 
 [ApiController]
 [Route("stock")]
 
 public class StockController : ControllerBase{
+    [Authorize]
     [HttpPost]
     [Route("add")]
     public object addProductToStock([FromBody] StocksDTO stocks){
@@ -24,7 +25,7 @@ public class StockController : ControllerBase{
             store = stocks.store
         };
     }
-
+    [Authorize]
     [HttpPut]
     [Route("update")]
     public Object update([FromBody]StocksDTO stocksDTO){

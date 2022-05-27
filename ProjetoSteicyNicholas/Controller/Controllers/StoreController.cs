@@ -27,12 +27,14 @@ using System;
 using Model;
 using DTO;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Controller.Controllers;
 
 [ApiController]
 [Route("store")]
 public class StoreController : ControllerBase{
+    [Authorize]
     [HttpPost]
     [Route("register")]
     public object registerStore(StoreDTO store){
@@ -46,14 +48,14 @@ public class StoreController : ControllerBase{
             id = id
         };
     }
-
+    [Authorize]
     [HttpGet]
     [Route("getAll")]
     public object getAllStores(){
         var stores=Model.Store.getStores();
         return stores;
     }
-
+    [Authorize]
     [HttpGet]
     [Route("getStore/{CNPJ}")]
     public object getStoreInformation(string CNPJ){

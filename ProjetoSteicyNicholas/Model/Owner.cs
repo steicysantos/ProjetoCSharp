@@ -146,5 +146,20 @@ public class Owner : Person,IValidateDataObject,IDataController<OwnerDTO, Owner>
         return ownerDTO;
     }
 
+    public static DAO.Owner findByUser(String login, string password)
+    {
+        using (var context = new DAOContext())
+        {
+            var ownerDAO = context.Owner.FirstOrDefault(o => o.login == login && o.passwd==password);
+
+            if(ownerDAO != null){
+
+                return ownerDAO;
+            }
+
+            return null;
+        }
+    }
+
 }
 

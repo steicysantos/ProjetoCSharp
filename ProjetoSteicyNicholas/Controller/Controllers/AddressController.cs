@@ -26,14 +26,14 @@ public class AddressController:ControllerBase{
             id=id
         };
     }
-
+    [Authorize]
     [HttpDelete]
     [Route("remove")]
     public void removeAddress(AddressDTO address){
 
         Model.Address.delete(address);
     }
-
+    [Authorize]
     [HttpPut]
     [Route("update")]
     public void updateAddress([FromBody]AddressDTO address){

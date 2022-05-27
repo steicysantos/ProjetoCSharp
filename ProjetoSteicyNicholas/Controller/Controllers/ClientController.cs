@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.AspNetCore.Authorization;
 namespace Controller.Controllers;
 
 
@@ -36,6 +37,7 @@ public class ClientController : ControllerBase
             id=id
         };
     }
+    [Authorize]
     [HttpGet]
     [Route("get/{document}")]
     public object getInformations(string document)
@@ -59,6 +61,7 @@ public class ClientController : ControllerBase
     public IActionResult tokenGenerate([FromBody] ClientDTO login){
         if(login != null && login.login != null && login.passwd != null){
             var user = Model.Client.findByUser(login.login, login.passwd);
+            Response.Headers.Add("Access-Control-Allow-Origin", "*");
             if(user != null){
                 var claims = new[] {
                     new Claim(JwtRegisteredClaimNames.Sub, _configuration["Jwt:Subject"]),
