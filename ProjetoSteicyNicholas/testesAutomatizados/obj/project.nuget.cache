@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Mg0n8D+Z2GtMXu9xCXSHFYC0p09/OU2oEJWqKE0Me1F2fDY6sl7p/uQNCz4xqrFA+i8GAwFaa+u4GlXJruWsnw==",
+  "dgSpecHash": "QGA6YzF31eJRW2tW+3Rmt5bx2VidItC+DZi4djaJu7geZBLh8ZFgLh2IGE9oHMoe0GJ6JNCijfXm1shBzFwGJA==",
   "success": true,
   "projectFilePath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\testesAutomatizados\\testesAutomatizados.csproj",
   "expectedPackageFiles": [
@@ -45,7 +45,7 @@
     "C:\\Users\\disrct\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
     "C:\\Users\\disrct\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\disrct\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",
-    "C:\\Users\\disrct\\.nuget\\packages\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
     "C:\\Users\\disrct\\.nuget\\packages\\nunit3testadapter\\3.16.1\\nunit3testadapter.3.16.1.nupkg.sha512",
     "C:\\Users\\disrct\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\disrct\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",

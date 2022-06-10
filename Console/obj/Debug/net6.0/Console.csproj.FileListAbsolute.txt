@@ -1,0 +1,15 @@
+C:\Users\disrct\Desktop\ProjetoCSharp\Console\bin\Debug\net6.0\Console.exe
+C:\Users\disrct\Desktop\ProjetoCSharp\Console\bin\Debug\net6.0\Console.deps.json
+C:\Users\disrct\Desktop\ProjetoCSharp\Console\bin\Debug\net6.0\Console.runtimeconfig.json
+C:\Users\disrct\Desktop\ProjetoCSharp\Console\bin\Debug\net6.0\Console.dll
+C:\Users\disrct\Desktop\ProjetoCSharp\Console\bin\Debug\net6.0\Console.pdb
+C:\Users\disrct\Desktop\ProjetoCSharp\Console\obj\Debug\net6.0\Console.csproj.AssemblyReference.cache
+C:\Users\disrct\Desktop\ProjetoCSharp\Console\obj\Debug\net6.0\Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\disrct\Desktop\ProjetoCSharp\Console\obj\Debug\net6.0\Console.AssemblyInfoInputs.cache
+C:\Users\disrct\Desktop\ProjetoCSharp\Console\obj\Debug\net6.0\Console.AssemblyInfo.cs
+C:\Users\disrct\Desktop\ProjetoCSharp\Console\obj\Debug\net6.0\Console.csproj.CoreCompileInputs.cache
+C:\Users\disrct\Desktop\ProjetoCSharp\Console\obj\Debug\net6.0\Console.dll
+C:\Users\disrct\Desktop\ProjetoCSharp\Console\obj\Debug\net6.0\refint\Console.dll
+C:\Users\disrct\Desktop\ProjetoCSharp\Console\obj\Debug\net6.0\Console.pdb
+C:\Users\disrct\Desktop\ProjetoCSharp\Console\obj\Debug\net6.0\Console.genruntimeconfig.cache
+C:\Users\disrct\Desktop\ProjetoCSharp\Console\obj\Debug\net6.0\ref\Console.dll
