@@ -2,6 +2,7 @@ using System;
 using Interfaces; 
 using DAO;
 using DTO;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
 namespace Model;
@@ -9,21 +10,18 @@ namespace Model;
 public class WishList : IValidateDataObject, IDataController<WishListDTO, WishList>
 {
     private Client client;
-    List <Product> listaProdutos=new List<Product>();
+    private List<Stocks> stocks = new List<Stocks>();
 
     public List<WishListDTO> wishListDTO = new List<WishListDTO>();
 
-    public void addProductToWishList(Product product){
-        listaProdutos.Add(product);
-    }
 
     public static WishList convertDTOToModel(WishListDTO obj)
     {
         var wishlist = new WishList();
         wishlist.client =  Client.convertDTOToModel(obj.client);
 
-        foreach(var item in obj.products){
-            wishlist.listaProdutos.Add(Product.convertDTOToModel(item));
+        foreach(var item in obj.stocks){
+            wishlist.addProductToWishList(Stocks.convertDTOToModel(item));
         }
         return wishlist;
     }
@@ -38,66 +36,38 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
         return true;
     }
 
-    public void delete(){
-        using (var context = new DAOContext()){
-
-            foreach(var prod in this.listaProdutos){
-                var client = context.WishList.FirstOrDefault(i => i.client.document == this.client.getDocument() && i.product.bar_code == prod.getBarCode());
-                context.WishList.Remove(client);
-                context.SaveChanges();
-                } 
+    public static string delete(int id,int ClientId){
+        using (var context = new DAOContext())
+        {
+            var wishList = context.WishList
+            .FirstOrDefault(w => w.id == id && w.client.id == ClientId);
+            context.WishList.Remove(wishList);
+            context.SaveChanges();
+            return "sucess";
         }
     }
-
-    // public int save()
-    // {
-    //     var id = 0;
-
-    //     using(var context = new DAOContext())
-    //     {
-            
-    //         var client = new DAO.Client
-    //         {
-    //             name = this.client.getName(),
-    //             date_of_birth = this.client.getDate_of_birth(),
-    //             document = this.client.getDocument(),
-    //             email = this.client.getEmail(),
-    //             phone = this.client.getPhone(),
-    //             passwd = this.client.getPasswd(),
-    //             login = this.client.getLogin(),
-    //             address = this.client.getAddress()
-    //         };
-    //         var wishList = new DAO.WishList{
-    //             client = this.client,
-    //             product = this.listaProdutos
-    //         };
-
-    //         context.WishList.Add(wishList);
-
-    //         context.SaveChanges();
-
-    //         id = wishList.id;
-
-    //     }
-    //      return id;
-    // }
-     public int save(string clientDoc, int prod)
+    public int save(int stock, int client)
     {
         var id = 0;
 
-        using(var context = new DAOContext())
+        using (var context = new DAOContext())
         {
-            var clientDAO = context.Client.FirstOrDefault(c => c.document == clientDoc);
-            var productDAO = context.Product.Where(c => c.id == prod).Single();
-            var wl = new DAO.WishList{
+            var clientDAO = context.Client.FirstOrDefault(c => c.id == client);
+            var stocksDAO = context.Stock.FirstOrDefault(x=> x.id == stock);
+
+            var wishList = new DAO.WishList
+            {
                 client = clientDAO,
-                product=productDAO
+                stocks = stocksDAO
+                
             };
-            context.WishList.Add(wl);
+            context.WishList.Add(wishList);
+            context.Entry(wishList.client).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
+            context.Entry(wishList.stocks).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
             context.SaveChanges();
-            id = wl.id;
+            id = wishList.id;
         }
-         return id;
+        return id;
     }
 
     public void update(WishListDTO obj)
@@ -123,8 +93,8 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
 
         wishListDTO.client = this.client.convertModelToDTO();
 
-        foreach(var item in this.listaProdutos){
-            wishListDTO.products.Add(item.convertModelToDTO());
+        foreach(var item in this.stocks){
+            wishListDTO.stocks.Add(item.convertModelToDTO());
         }
 
         return wishListDTO;
@@ -135,10 +105,6 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
         this.client = client;
     }
 
-    public void setListaProdutos(List<Product> listaProdutos)
-    {
-        this.listaProdutos = listaProdutos;
-    }
 
 
     public Client getClient()
@@ -146,9 +112,43 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
         return this.client;
     }
 
-    public List<Product> getProducts()
-    {        
-        return this.listaProdutos;
+
+        public static List<WishListResponseDTO> GetWishList(int IdClient){
+
+        using(var context = new DAOContext()){
+            var wishLists = context.WishList.Include(p=>p.client).Include(p=>p.stocks)
+            .Include(p=>p.stocks.product).Include(p=> p.stocks.store).Where(i=> i.client.id ==IdClient);
+        
+            var responseproducts = new List<WishListResponseDTO>();
+            foreach(var item in wishLists)
+            {
+                var newproduct = new WishListResponseDTO();
+                newproduct.bar_code = item.stocks.product.bar_code;
+                Console.WriteLine("Cjega aqui");
+                newproduct.IdStocks = item.stocks.id;
+                newproduct.idWishlist = item.id;
+                newproduct.description = item.stocks.product.description;
+                newproduct.image = item.stocks.product.image;
+                newproduct.Unit_price = item.stocks.unit_price;
+                Console.WriteLine("Cjega aqui 2");
+                newproduct.cnpjj = item.stocks.store.CNPJ;
+                newproduct.Quantity = item.stocks.quantity;
+                Console.WriteLine("Cjega aqio 3");
+                newproduct.name = item.stocks.product.name;
+                responseproducts.Add(newproduct);
+                Console.WriteLine(responseproducts[0]);
+                
+            }
+            return responseproducts;
+        }   
+    }
+    public List<Stocks> GetStocks() { return stocks; }
+    public void addProductToWishList(Stocks stock)
+    {
+        if (!GetStocks().Contains(stock))
+        {
+            this.stocks.Add(stock);
+        }
     }
 
 }

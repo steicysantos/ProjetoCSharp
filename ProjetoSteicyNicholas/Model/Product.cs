@@ -134,7 +134,8 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
                         bar_code = stock.product.bar_code,
                         image = stock.product.image,
                         description = stock.product.description,
-                        price = stock.unit_price
+                        price = stock.unit_price,
+                        IdStocks=stock.id
                     });
                 }
             }

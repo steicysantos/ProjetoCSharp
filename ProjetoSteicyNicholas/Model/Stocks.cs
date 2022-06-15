@@ -72,14 +72,15 @@ public class Stocks : IValidateDataObject, IDataController<StocksDTO, Stocks>
         using(var context = new DAOContext())
         {
 
-            var storeDAO = context.Store.FirstOrDefault(c => c.id == store);
-            var productDAO = context.Product.FirstOrDefault(c => c.id == product);
+            var storeDAO = context.Store.Where(c => c.id == store).Single();
+            var productDAO = context.Product.Where(c => c.id == product).Single();
 
             var stocks = new DAO.Stocks{
                 quantity = qtd,
                 unit_price = unit_price,
-                store = storeDAO,
-                product = productDAO
+                product = productDAO,
+                store = storeDAO
+                
             };
             context.Stock.Add(stocks);
             context.SaveChanges();

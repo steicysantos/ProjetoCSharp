@@ -13,11 +13,12 @@ public class DAOContext:DbContext
     public DbSet<WishList> WishList {get;set;}
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(@"Server=JVLPC0506;Initial Catalog=MarketPlace;Integrated Security=True;");
+        optionsBuilder.UseSqlServer(@"Server=JVLPC0506;Initial Catalog=MarketPlace_teste;Integrated Security=True;");
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
            base.OnModelCreating(modelBuilder);
+           
             modelBuilder.Entity<Address>(entity =>
         {
             entity.HasKey(e => e.id);
@@ -90,13 +91,13 @@ public class DAOContext:DbContext
             entity.HasKey(e => e.id);
             entity.Property(e => e.Name);
             entity.Property(e => e.CNPJ);
-            entity.HasOne(e => e.owner);
+            entity.HasOne(d => d.owner);
         });
 
         modelBuilder.Entity<WishList>(entity =>
         {
             entity.HasKey(e=> e.id);
-            entity.HasOne(e => e.product);
-            entity.HasOne(e => e.client);
+            entity.HasOne(d => d.stocks);
+            entity.HasOne(d => d.client);
         });
         }}

@@ -5,11 +5,12 @@ using DTO;
 using System.Linq;
 using DAO;
 using Model;
-using System.Threading;
 using Enums;
+using System.Threading;
+
 namespace testesAutomatizados
 {
-    
+
     public class TestDAO 
     {
         [Test]
@@ -58,7 +59,7 @@ namespace testesAutomatizados
 
             var clientDTO = new ClientDTO();
 
-            clientDTO.name = "João Batista";
+            clientDTO.name = "JoÃ£o Batista";
 
             clientDTO.email = "joao.batista@email.com";
 
@@ -449,7 +450,9 @@ namespace testesAutomatizados
             int  dono = 1;
 
             foreach(var str in stores){
+
                 var storeModel = Model.Store.convertDTOToModel(str);               
+
                 if(storeModel.validateObject()){
                     id = storeModel.save(dono);
                 }
@@ -475,9 +478,8 @@ namespace testesAutomatizados
 
             productDTO1.bar_code = "12521142521252325";
 
-            productDTO1.image = "https://img.freepik.com/fotos-gratis/3d-rendem-de-uma-mesa-de-madeira-com-uma-imagem-defocussed-de-um-barco-em-um-lago_1048-3432.jpg?w=2000";
-
-            productDTO1.description = "ojsgeiouhguisehgfiusedhfeso0fhs";
+            productDTO1.image = "https://img.irroba.com.br/filters:fill(fff):quality(95)/selariap/catalog/produtos/chapeus-2/chapeu-pralana-bangora-terreon-a.jpg";
+            productDTO1.description = "aaaaaaa";
 
             produtos.Add(productDTO1);
 
@@ -486,10 +488,8 @@ namespace testesAutomatizados
             productDTO2.name = "produto 2";
 
             productDTO2.bar_code = "7854687654865";
-
-            productDTO2.image = "https://img.freepik.com/fotos-gratis/3d-rendem-de-uma-mesa-de-madeira-com-uma-imagem-defocussed-de-um-barco-em-um-lago_1048-3432.jpg?w=2000";
-
-            productDTO2.description = "ojsgeiouhguisehgfiusedhfeso0fhs";
+            productDTO2.image = "https://img.irroba.com.br/filters:fill(fff):quality(95)/selariap/catalog/produtos/chapeus-2/chapeu-pralana-bangora-terreon-a.jpg";
+            productDTO2.description = "aaaaaaa";
 
             produtos.Add(productDTO2);
 
@@ -499,10 +499,8 @@ namespace testesAutomatizados
             productDTO3.name = "produto 3";
 
             productDTO3.bar_code = "4524112588543164";
-
-            productDTO3.image = "https://img.freepik.com/fotos-gratis/3d-rendem-de-uma-mesa-de-madeira-com-uma-imagem-defocussed-de-um-barco-em-um-lago_1048-3432.jpg?w=2000";
-
-            productDTO3.description = "ojsgeiouhguisehgfiusedhfeso0fhs";
+            productDTO3.image = "https://img.irroba.com.br/filters:fill(fff):quality(95)/selariap/catalog/produtos/chapeus-2/chapeu-pralana-bangora-terreon-a.jpg";
+            productDTO3.description = "aaaaaaa";
 
             produtos.Add(productDTO3);
 
@@ -512,10 +510,8 @@ namespace testesAutomatizados
             productDTO4.name = "produto 4";
 
             productDTO4.bar_code = "632154584531685";
-
-            productDTO4.image = "https://img.freepik.com/fotos-gratis/3d-rendem-de-uma-mesa-de-madeira-com-uma-imagem-defocussed-de-um-barco-em-um-lago_1048-3432.jpg?w=2000";
-
-            productDTO4.description = "ojsgeiouhguisehgfiusedhfeso0fhs";
+            productDTO4.image = "https://img.irroba.com.br/filters:fill(fff):quality(95)/selariap/catalog/produtos/chapeus-2/chapeu-pralana-bangora-terreon-a.jpg";
+            productDTO4.description = "aaaaaaa";
 
             produtos.Add(productDTO4);
 
@@ -525,23 +521,21 @@ namespace testesAutomatizados
             productDTO5.name = "produto 5";
 
             productDTO5.bar_code = "421324862132465";
-
-            productDTO5.image = "https://img.freepik.com/fotos-gratis/3d-rendem-de-uma-mesa-de-madeira-com-uma-imagem-defocussed-de-um-barco-em-um-lago_1048-3432.jpg?w=2000";
-
-            productDTO5.description = "ojsgeiouhguisehgfiusedhfeso0fhs";
+            productDTO5.image = "https://img.irroba.com.br/filters:fill(fff):quality(95)/selariap/catalog/produtos/chapeus-2/chapeu-pralana-bangora-terreon-a.jpg";
+            productDTO5.description = "aaaaaaa";
 
             produtos.Add(productDTO5);
 
             var id = 0;
 
             foreach(var prod in produtos){
-                
+
                 var productModel = Model.Product.convertDTOToModel(prod);               
-                
+
                 if(productModel.validateObject()){
-                    
+
                     id = productModel.save();
-                    
+
                 }
 
                 Assert.That(id, Is.Not.EqualTo(0));
@@ -585,8 +579,8 @@ namespace testesAutomatizados
                     var cliente = context.Client.Where(c=> c.id == client).Single();
                     for(int product = 1; product<5;product++){
                         var wishList = new Model.WishList();
-                        Console.WriteLine(cliente.document);
-                        id = wishList.save(cliente.document, product);
+
+                        id = wishList.save(cliente.id, product);
 
                         Assert.That(id, Is.Not.EqualTo(0));
 
@@ -645,7 +639,7 @@ namespace testesAutomatizados
 
             storeDTO1.name = "Loja 98";
 
-            storeDTO1.CNPJ = "52647825458";      
+            storeDTO1.CNPJ = "52647825458";    
 
             var addressDTO5  =  new AddressDTO();
 
@@ -657,11 +651,9 @@ namespace testesAutomatizados
 
             addressDTO5.country = "pais cliente 1";
 
-            addressDTO5.postal_code = "12cliente5";
+            addressDTO5.postal_code = "12cliente5";  
 
             var clientDTO5 = new ClientDTO();
-
-            clientDTO5.address=addressDTO5;
 
             clientDTO5.name = "Beatriz Silva";
 
@@ -674,6 +666,8 @@ namespace testesAutomatizados
             clientDTO5.phone = "41999999999";
 
             clientDTO5.document = "753256842";
+
+            clientDTO5.address = addressDTO5;
             
             clientDTO5.date_of_birth = new DateTime(2002, 5, 1, 8, 30, 30);
 

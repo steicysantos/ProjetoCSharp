@@ -12,28 +12,31 @@ public class WishListController : ControllerBase
         [Authorize]
         [HttpPost]
         [Route("register")]
-                public object addProductToWishList([FromBody]WishListDTO wishList){
-                var wishListModel = Model.WishList.convertDTOToModel(wishList);
-                var id = 0;
-                foreach(var product in wishList.products){
-                        var idProduto = Model.Product.find(product);
-
-                        id = wishListModel.save(wishList.client.document, idProduto);
-                }
-                return new {
-                        id = id,
-                        client = wishList.client.document,
-                        produto = wishList.products
-                };
+                public object addProductToWishList([FromBody]StocksRequestDTO stocksDTO){
+                var ClientId = Lib.GetIdFromRequest( Request.Headers["Authorization"].ToString());
+                var wishlist = new Model.WishList();
+                wishlist.save(stocksDTO.id, ClientId);
+        return new
+        {
+                response = "salvou no banco"
+        };
                 }
         [Authorize]
         [HttpDelete]
-        [Route("delete")]
-        public object removeProductToWishList([FromBody]WishListDTO wishListDTO){
-                Model.WishList.convertDTOToModel(wishListDTO).delete();
-                return new {
-                        status = "ok",
-                        mensagem = "excluido"
-                };
+        [Route("delete/{idwishlist}")]
+        public object removeProductToWishList(int id){
+                var ClientId = Lib.GetIdFromRequest( Request.Headers["Authorization"].ToString());
+                var response = Model.WishList.delete(id,ClientId);
+                return response;
+        }
+        [Authorize]
+        [HttpGet]
+        [Route("getwishlist")]
+        public IActionResult GetWishList(){
+        var ClientId = Lib.GetIdFromRequest( Request.Headers["Authorization"].ToString());
+                var tabela=Model.WishList.GetWishList(ClientId);
+                var result = new ObjectResult(tabela);
+                return result;
+;
         }
 }
