@@ -37,6 +37,7 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
     }
 
     public static string delete(int id,int ClientId){
+        
         using (var context = new DAOContext())
         {
             var wishList = context.WishList
@@ -124,19 +125,15 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
             {
                 var newproduct = new WishListResponseDTO();
                 newproduct.bar_code = item.stocks.product.bar_code;
-                Console.WriteLine("Cjega aqui");
                 newproduct.IdStocks = item.stocks.id;
                 newproduct.idWishlist = item.id;
                 newproduct.description = item.stocks.product.description;
                 newproduct.image = item.stocks.product.image;
                 newproduct.Unit_price = item.stocks.unit_price;
-                Console.WriteLine("Cjega aqui 2");
                 newproduct.cnpjj = item.stocks.store.CNPJ;
                 newproduct.Quantity = item.stocks.quantity;
-                Console.WriteLine("Cjega aqio 3");
                 newproduct.name = item.stocks.product.name;
                 responseproducts.Add(newproduct);
-                Console.WriteLine(responseproducts[0]);
                 
             }
             return responseproducts;

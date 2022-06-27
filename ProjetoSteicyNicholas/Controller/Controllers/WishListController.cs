@@ -24,9 +24,9 @@ public class WishListController : ControllerBase
         [Authorize]
         [HttpDelete]
         [Route("delete/{idwishlist}")]
-        public object removeProductToWishList(int id){
+        public string removeProductToWishList(int idwishlist){
                 var ClientId = Lib.GetIdFromRequest( Request.Headers["Authorization"].ToString());
-                var response = Model.WishList.delete(id,ClientId);
+                var response = Model.WishList.delete(idwishlist,ClientId);
                 return response;
         }
         [Authorize]

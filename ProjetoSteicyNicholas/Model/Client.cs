@@ -89,16 +89,17 @@ public class Client : Person, IValidateDataObject,IDataController<ClientDTO, Cli
         return new ClientDTO();
     }
 
-    public static object find(String document){
+    public static object find(int id){
         using (var context = new DAOContext()){
 
-            var ClientDAO=context.Client.Include(i=>i.address).FirstOrDefault(e=>e.document==document);
+            var ClientDAO=context.Client.Include(i=>i.address).FirstOrDefault(e=>e.id==id);
 
             return new {
                 name=ClientDAO.name,
                 email=ClientDAO.email,
                 passwd=ClientDAO.passwd,
                 date_of_birth=ClientDAO.date_of_birth,
+                document=ClientDAO.document,
                 phone=ClientDAO.phone,
                 login=ClientDAO.login,
                 address=ClientDAO.address,

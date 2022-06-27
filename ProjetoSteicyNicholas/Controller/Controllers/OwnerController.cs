@@ -40,11 +40,12 @@ public class OwnerController : ControllerBase
     }
     [Authorize]
     [HttpGet]
-    [Route("get/{document}")]
-    public object getInformations(string document)
+    [Route("get")]
+    public object getInformations()
     {
-        var client=Model.Owner.find(document);
-        return client;
+        var id = Lib.GetIdFromRequest( Request.Headers["Authorization"].ToString());
+        var owner=Model.Owner.find(id);
+        return owner;
     }
 
 

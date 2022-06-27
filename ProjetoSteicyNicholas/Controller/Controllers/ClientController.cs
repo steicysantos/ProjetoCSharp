@@ -39,10 +39,11 @@ public class ClientController : ControllerBase
     }
     [Authorize]
     [HttpGet]
-    [Route("get/{document}")]
-    public object getInformations(string document)
+    [Route("get")]
+    public object getInformations()
     {
-        var client=Model.Client.find(document);
+        var id = Lib.GetIdFromRequest( Request.Headers["Authorization"].ToString());
+        var client=Model.Client.find(id);
         return client;
     }
 

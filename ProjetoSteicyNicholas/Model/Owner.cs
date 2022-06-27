@@ -117,16 +117,17 @@ public class Owner : Person,IValidateDataObject,IDataController<OwnerDTO, Owner>
         return this.ownerDTO;
     }
 
-    public static object find(String document){
+    public static object find(int id){
         using (var context = new DAOContext()){
 
-            var OwnerDAO=context.Owner.Include(i=>i.address).FirstOrDefault(e=>e.document==document);
+            var OwnerDAO=context.Owner.Include(i=>i.address).FirstOrDefault(e=>e.id==id);
 
             return new {
                 name=OwnerDAO.name,
                 email=OwnerDAO.email,
                 passwd=OwnerDAO.passwd,
                 date_of_birth=OwnerDAO.date_of_birth,
+                document=OwnerDAO.document,
                 phone=OwnerDAO.phone,
                 login=OwnerDAO.login,
                 address=OwnerDAO.address,
