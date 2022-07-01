@@ -10,7 +10,7 @@ namespace Controller.Controllers;
 [Route("product")]
 public class ProductController : ControllerBase
 {
-        [Authorize]     
+             
         [HttpPost]
         [Route("register")]
         public object registerProduct(ProductDTO product){
@@ -19,6 +19,7 @@ public class ProductController : ControllerBase
                 return new{
                 nome = product.name,
                 codigoBarra = product.bar_code,
+                imagelink=product.image,
                 id = id
                 };
         }

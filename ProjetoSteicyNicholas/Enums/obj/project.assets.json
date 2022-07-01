@@ -8,25 +8,25 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\liq1ct\\.nuget\\packages\\": {},
+    "C:\\Users\\VIN1CT\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj",
+      "projectUniqueName": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj",
       "projectName": "Enums",
-      "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj",
-      "packagesPath": "C:\\Users\\liq1ct\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\obj\\",
+      "projectPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj",
+      "packagesPath": "C:\\Users\\VIN1CT\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\liq1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\VIN1CT\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -68,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

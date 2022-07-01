@@ -124,7 +124,7 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
 
             using(var context = new DAOContext()){
 
-                var stocks = context.Stock.Include(s => s.product).ToList();
+                var stocks = context.Stock.Include(s => s.product).Include(s=>s.store).ToList();
                 foreach(var stock in stocks)
                 {
                     produtos.Add(new
@@ -134,8 +134,10 @@ public class Product: IValidateDataObject,IDataController<ProductDTO, Product>{
                         bar_code = stock.product.bar_code,
                         image = stock.product.image,
                         description = stock.product.description,
-                        price = stock.unit_price,
-                        IdStocks=stock.id
+                        unit_price = stock.unit_price,
+                        IdStocks=stock.id,
+                        IdStore=stock.store.id,
+                        quantity=stock.quantity
                     });
                 }
             }

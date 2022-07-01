@@ -86,6 +86,18 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
             };
         }
     }
+    public static object getStoreInfoID(int id){
+        using (var context = new DAOContext()){
+            
+            var storeDAO = context.Store.Include(s => s.owner).Include(s => s.owner.address).FirstOrDefault(p => p.id == id);
+            Console.WriteLine(storeDAO.Name);
+            return new {
+                name=storeDAO.Name,
+                CNPJ=storeDAO.CNPJ,
+                owner=storeDAO.owner
+            };
+        }
+    }
      public static List<object> getStores(){
         using (var context = new DAOContext()){
             var stores = context.Store.Include(s => s.owner);

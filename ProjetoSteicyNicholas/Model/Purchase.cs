@@ -81,23 +81,23 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
     //     };
     //     return id;
     // }
-    public int save()
+    public int save(int client, int store, int product, DateTime data, PaymentEnum paymenttype, PurchaseStatusEnum status, string numberconf, string nf)
     {
         var id = 0;
 
         using(var context = new DAOContext())
         {
-            var clientDAO =  context.Client.FirstOrDefault(c => c.id == 1);
-            var storeDAO = context.Store.FirstOrDefault(s =>s.id ==1);
-            var productsDAO = context.Product.Where(p => p.id == 1).Single();
+            var clientDAO =  context.Client.FirstOrDefault(c => c.id == client);
+            var storeDAO = context.Store.FirstOrDefault(s =>s.id == store);
+            var productsDAO = context.Product.Where(p => p.id == product).Single();
 
 
             var purchase = new DAO.Purchase{
-                date_purchase = this.date_purchase,
-                number_confirmation = this.number_confirmation,
-                number_nf = this.number_nf,
-                payment_type = this.payment_type,
-                purchase_status = this.purchase_status,
+                date_purchase = data,
+                number_confirmation = numberconf,
+                number_nf = nf,
+                payment_type = paymenttype,
+                purchase_status = status,
                 store=storeDAO,
                 client=clientDAO,
                 product=productsDAO

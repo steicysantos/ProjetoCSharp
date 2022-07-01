@@ -25,21 +25,15 @@ public class PurchaseController : ControllerBase
     [Authorize]
     [HttpPost]
     [Route("make")]
-    public Object makePurchase(PurchaseDTO purchaseDTO){
-        var purchase = Purchase.convertDTOToModel(purchaseDTO);
-        var id = purchase.save();
-        return new{
-            date_purchase = purchaseDTO.date_purchase,
-            purchase_value = purchaseDTO.purchase_value,
-            payment_type = purchaseDTO.payment_type,
-            purchase_status = purchaseDTO.purchase_status,
-            number_comfirmation = purchaseDTO.number_confirmation,
-            number_nf = purchaseDTO.number_nf,
-            products = purchaseDTO.product,
-            store = purchaseDTO.store,
-            cliente = purchaseDTO.client,
-            id = id
-        };
+    public void makePurchase(PurchaseRequestDTO purchaseDTO){
+        DateTime time = DateTime.Now;              // Use current time
+        string format = "yyyy-MM-dd HH:mm:ss"; 
+        var ClientId = Lib.GetIdFromRequest( Request.Headers["Authorization"].ToString());
+        var purchaseModel = new Model.Purchase();
+        var requests=purchaseModel.save(ClientId,purchaseDTO.idStore,purchaseDTO.idProduct,purchaseDTO.date_purchase, purchaseDTO.payment_type, purchaseDTO.purchase_status, purchaseDTO.number_confirmation, purchaseDTO.number_nf );
+
+        
+        
     }
 
 

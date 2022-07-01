@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Controller\\Controller.csproj": {}
+    "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Controller\\Controller.csproj": {}
   },
   "projects": {
-    "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Controller\\Controller.csproj": {
+    "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Controller\\Controller.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Controller\\Controller.csproj",
+        "projectUniqueName": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Controller\\Controller.csproj",
         "projectName": "Controller",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Controller\\Controller.csproj",
-        "packagesPath": "C:\\Users\\liq1ct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Controller\\obj\\",
+        "projectPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Controller\\Controller.csproj",
+        "packagesPath": "C:\\Users\\VIN1CT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Controller\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\liq1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\VIN1CT\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -34,11 +34,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj"
+              "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj"
               },
-              "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\Model.csproj"
+              "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\Model.csproj"
               }
             }
           }
@@ -88,25 +88,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DAO\\DAO.csproj": {
+    "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DAO\\DAO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DAO\\DAO.csproj",
+        "projectUniqueName": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DAO\\DAO.csproj",
         "projectName": "DAO",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DAO\\DAO.csproj",
-        "packagesPath": "C:\\Users\\liq1ct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DAO\\obj\\",
+        "projectPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DAO\\DAO.csproj",
+        "packagesPath": "C:\\Users\\VIN1CT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DAO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\liq1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\VIN1CT\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -122,8 +122,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj": {
-                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj"
+              "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj": {
+                "projectPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj"
               }
             }
           }
@@ -166,25 +166,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj": {
+    "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj",
+        "projectUniqueName": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj",
-        "packagesPath": "C:\\Users\\liq1ct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\obj\\",
+        "projectPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\VIN1CT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\liq1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\VIN1CT\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -200,8 +200,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj": {
-                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj"
+              "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj": {
+                "projectPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj"
               }
             }
           }
@@ -236,25 +236,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj": {
+    "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj",
+        "projectUniqueName": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj",
         "projectName": "Enums",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj",
-        "packagesPath": "C:\\Users\\liq1ct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\obj\\",
+        "projectPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj",
+        "packagesPath": "C:\\Users\\VIN1CT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\liq1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\VIN1CT\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -296,25 +296,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Interfaces\\Interfaces.csproj": {
+    "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Interfaces\\Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Interfaces\\Interfaces.csproj",
+        "projectUniqueName": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Interfaces\\Interfaces.csproj",
         "projectName": "Interfaces",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Interfaces\\Interfaces.csproj",
-        "packagesPath": "C:\\Users\\liq1ct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Interfaces\\obj\\",
+        "projectPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Interfaces\\Interfaces.csproj",
+        "packagesPath": "C:\\Users\\VIN1CT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Interfaces\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\liq1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\VIN1CT\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -356,25 +356,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\Model.csproj": {
+    "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\liq1ct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\obj\\",
+        "projectPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\VIN1CT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\liq1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\VIN1CT\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -390,17 +390,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DAO\\DAO.csproj": {
-                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DAO\\DAO.csproj"
+              "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DAO\\DAO.csproj": {
+                "projectPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DAO\\DAO.csproj"
               },
-              "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj"
+              "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj"
               },
-              "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj": {
-                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj"
+              "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj": {
+                "projectPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj"
               },
-              "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Interfaces\\Interfaces.csproj": {
-                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Interfaces\\Interfaces.csproj"
+              "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Interfaces\\Interfaces.csproj": {
+                "projectPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Interfaces\\Interfaces.csproj"
               }
             }
           }
@@ -435,7 +435,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

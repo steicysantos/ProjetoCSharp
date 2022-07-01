@@ -138,3 +138,26 @@ S:\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\4 
 S:\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\4 - Programador WEB 2\5 - Desenvolvimento de Sistemas\1 - Alunos\Steicy Santos\ProjetoC#\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.pdb
 S:\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\4 - Programador WEB 2\5 - Desenvolvimento de Sistemas\1 - Alunos\Steicy Santos\ProjetoC#\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.genruntimeconfig.cache
 S:\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\4 - Programador WEB 2\5 - Desenvolvimento de Sistemas\1 - Alunos\Steicy Santos\ProjetoC#\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\ref\Model.dll
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\Model.deps.json
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\Model.runtimeconfig.json
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\Model.dll
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\Model.pdb
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\DAO.dll
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\DTO.dll
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\Enums.dll
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\Interfaces.dll
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\Interfaces.pdb
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\Enums.pdb
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\DTO.pdb
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\DAO.pdb
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.csproj.AssemblyReference.cache
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.AssemblyInfoInputs.cache
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.AssemblyInfo.cs
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.csproj.CoreCompileInputs.cache
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.csproj.CopyComplete
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.dll
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\refint\Model.dll
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.pdb
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.genruntimeconfig.cache
+C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\ref\Model.dll

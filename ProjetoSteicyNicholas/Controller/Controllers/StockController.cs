@@ -7,7 +7,6 @@ namespace Controller.Controllers;
 [Route("stock")]
 
 public class StockController : ControllerBase{
-    [Authorize]
     [HttpPost]
     [Route("add")]
     public object addProductToStock([FromBody] StocksDTO stocks){

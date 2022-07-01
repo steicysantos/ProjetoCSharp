@@ -2748,25 +2748,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\liq1ct\\.nuget\\packages\\": {},
+    "C:\\Users\\VIN1CT\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\Model.csproj",
+      "projectUniqueName": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\Model.csproj",
       "projectName": "Model",
-      "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\Model.csproj",
-      "packagesPath": "C:\\Users\\liq1ct\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\obj\\",
+      "projectPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\Model.csproj",
+      "packagesPath": "C:\\Users\\VIN1CT\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\liq1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\VIN1CT\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -2782,17 +2782,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DAO\\DAO.csproj": {
-              "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DAO\\DAO.csproj"
+            "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DAO\\DAO.csproj": {
+              "projectPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DAO\\DAO.csproj"
             },
-            "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj": {
-              "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj"
+            "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj": {
+              "projectPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj"
             },
-            "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj": {
-              "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj"
+            "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj": {
+              "projectPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj"
             },
-            "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Interfaces\\Interfaces.csproj": {
-              "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Interfaces\\Interfaces.csproj"
+            "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Interfaces\\Interfaces.csproj": {
+              "projectPath": "C:\\Users\\VIN1CT\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Interfaces\\Interfaces.csproj"
             }
           }
         }
@@ -2827,7 +2827,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

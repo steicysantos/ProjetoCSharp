@@ -62,4 +62,12 @@ public class StoreController : ControllerBase{
         var store=Model.Store.getStoreInfo(CNPJ);
         return store;
     }
+    [HttpGet]
+    [Route("getStores")]
+    public IActionResult getStoreInformations(){
+        var ownerId = Lib.GetIdFromRequest( Request.Headers["Authorization"].ToString());
+        var store=Model.Store.getStoreInfoID(ownerId);
+        var result = new ObjectResult(store);
+        return result;
+    }
 }
