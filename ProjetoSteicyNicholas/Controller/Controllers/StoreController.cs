@@ -38,12 +38,12 @@ public class StoreController : ControllerBase{
     [HttpPost]
     [Route("register")]
     public object registerStore(StoreDTO store){
+        var ownerId = Lib.GetIdFromRequest( Request.Headers["Authorization"].ToString());
         var storeModel = Model.Store.convertDTOToModel(store);
-        var id = storeModel.save(1);
+        var id = storeModel.save(ownerId);
         return new{
             name = store.name,
             cnpj = store.CNPJ,
-            listPurchase = store.purchase,
             owner = store.owner,
             id = id
         };
@@ -62,12 +62,22 @@ public class StoreController : ControllerBase{
         var store=Model.Store.getStoreInfo(CNPJ);
         return store;
     }
+    [Authorize]
     [HttpGet]
     [Route("getStores")]
     public IActionResult getStoreInformations(){
         var ownerId = Lib.GetIdFromRequest( Request.Headers["Authorization"].ToString());
+        Console.WriteLine(ownerId);
         var store=Model.Store.getStoreInfoID(ownerId);
         var result = new ObjectResult(store);
         return result;
+    }
+
+    [HttpGet]
+    [Route("getStoreID")]
+    public int getStoreID(){
+        var ownerId = Lib.GetIdFromRequest( Request.Headers["Authorization"].ToString());
+        var id=Model.Store.getStoreID(ownerId);
+        return id;
     }
 }

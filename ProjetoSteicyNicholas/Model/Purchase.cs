@@ -137,10 +137,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
         using(var context = new DAOContext()){
             var storePurchase = context.Purchase
             .Include(s => s.store)
-            .Include(o => o.store.owner)
-            .Include(a => a.store.owner.address)
             .Include(p => p.product)
-            .Include(a => a.client.address)
             .Where(p => p.client.id == clientID);
              List<object> compras = new List<object>();
              foreach(var compra in storePurchase){

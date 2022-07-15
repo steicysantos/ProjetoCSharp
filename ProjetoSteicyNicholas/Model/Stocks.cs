@@ -177,4 +177,13 @@ public class Stocks : IValidateDataObject, IDataController<StocksDTO, Stocks>
     {
         return this.product;
     }
+
+    public static int getStockID(int id){
+        using(var context = new DAOContext())
+        {
+             var stock = context.Stock.FirstOrDefault(p => p.product.id == id);
+
+            return stock.id;
+        }
+    }
 }

@@ -47,6 +47,17 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
             return "sucess";
         }
     }
+    public static string deleteFromStock(int id,int ClientId){
+        
+        using (var context = new DAOContext())
+        {
+            var wishList = context.WishList
+            .FirstOrDefault(w => w.stocks.id == id && w.client.id == ClientId);
+            context.WishList.Remove(wishList);
+            context.SaveChanges();
+            return "sucess";
+        }
+    }
     public int save(int stock, int client)
     {
         var id = 0;
@@ -139,6 +150,7 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
             return responseproducts;
         }   
     }
+
     public List<Stocks> GetStocks() { return stocks; }
     public void addProductToWishList(Stocks stock)
     {
@@ -147,5 +159,24 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO, WishLi
             this.stocks.Add(stock);
         }
     }
+
+    public static IEnumerable<object> getProduct(int id){
+        using(var context = new DAOContext())
+        {
+             var wishlist = context.WishList.Include(s => s.client).Where(a => a.client.id == id).Join(context.Stock.Include(s => s.store), w => w.stocks.product, s => s.product,(w,s) => new {
+                id = w.stocks.id,
+                product = w.stocks.product.name,
+                price = w.stocks.unit_price,
+                description = w.stocks.product.description,
+                image = w.stocks.product.image,
+                name = w.stocks.product.name,
+                store = s.store.Name,
+            }).ToList().GroupBy(x => x.id)
+            .Select(g => g.OrderBy(p => p.price).First());
+
+            return wishlist;
+        }
+    }
+    
 
 }

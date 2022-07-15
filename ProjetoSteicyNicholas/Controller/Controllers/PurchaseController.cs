@@ -10,15 +10,19 @@ public class PurchaseController : ControllerBase
 {
     [Authorize]
     [HttpGet]
-    [Route("getClient/{clientID}")]
-    public object getClientPurchase(int clientID){
-        var clientPurchase = Model.Purchase.getClientPurchases(clientID);
-        return clientPurchase;
+    [Route("getClient")]
+    public IActionResult getClientPurchase(){
+        var ClientId = Lib.GetIdFromRequest( Request.Headers["Authorization"].ToString());
+        var clientPurchase = Model.Purchase.getClientPurchases(ClientId);
+         var result = new ObjectResult(clientPurchase);
+                return result;
     }
     [Authorize]
     [HttpGet]
-    [Route("getStore/{storeID}")]
-    public object getStorePurchase(int storeID){
+    [Route("getStore")]
+    public object getStorePurchase(){
+        var ownerId = Lib.GetIdFromRequest( Request.Headers["Authorization"].ToString());
+        var storeID=Model.Store.getStoreID(ownerId);
         var storePurchase = Model.Purchase.getStorePurchases(storeID);
         return storePurchase;
     }

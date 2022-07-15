@@ -89,8 +89,7 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
     public static object getStoreInfoID(int id){
         using (var context = new DAOContext()){
             
-            var storeDAO = context.Store.Include(s => s.owner).Include(s => s.owner.address).FirstOrDefault(p => p.id == id);
-            Console.WriteLine(storeDAO.Name);
+            var storeDAO = context.Store.Include(s => s.owner).Include(s => s.owner.address).FirstOrDefault(p => p.owner.id == id);
             return new {
                 name=storeDAO.Name,
                 CNPJ=storeDAO.CNPJ,
@@ -107,6 +106,12 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
             }
 
             return lojas;
+        }
+    }
+    public static int getStoreID(int id){
+        using(var context = new DAOContext()){
+            var store = context.Store.FirstOrDefault(s => s.owner.id == id);
+            return store.id;
         }
     }
    

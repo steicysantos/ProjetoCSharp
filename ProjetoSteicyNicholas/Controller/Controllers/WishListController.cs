@@ -37,6 +37,25 @@ public class WishListController : ControllerBase
                 var tabela=Model.WishList.GetWishList(ClientId);
                 var result = new ObjectResult(tabela);
                 return result;
-;
         }
+        [Authorize]
+        [HttpGet]
+        [Route("getproduct")]
+        public IActionResult getproduct(){
+                var ClientId = Lib.GetIdFromRequest( Request.Headers["Authorization"].ToString());
+                var tabela=Model.WishList.getProduct(ClientId);
+                var result = new ObjectResult(tabela);
+                return result;
+        }
+
+        [Authorize]
+        [HttpDelete]
+        [Route("deleteStock/{idstock}")]
+        public string removeProductFromWishList(int idstock){
+                var ClientId = Lib.GetIdFromRequest( Request.Headers["Authorization"].ToString());
+                var response = Model.WishList.deleteFromStock(idstock,ClientId);
+                return response;
+        }
+
+        
 }

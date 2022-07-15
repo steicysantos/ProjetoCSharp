@@ -34,5 +34,11 @@ public class StockController : ControllerBase{
             status = "ok",
             mensagem = "deu boa"
         };
-    }   
+    } 
+    [HttpGet]
+    [Route("getStockID/{id}")]
+    public int getStockID(int id){
+            var idstock=Model.Stocks.getStockID(id);
+            return idstock;
+    }  
 }
