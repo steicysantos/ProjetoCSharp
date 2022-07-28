@@ -35,9 +35,9 @@ public class AddressController:ControllerBase{
     }
     [Authorize]
     [HttpPut]
-    [Route("update")]
-    public void updateAddress([FromBody]AddressDTO address){
+    [Route("update/{id}")]
+    public void updateAddress([FromBody]AddressDTO address,int id){
         var addresss = new Model.Address();
-        addresss.update(address);
+        addresss.update(address,id);
     }    
 }

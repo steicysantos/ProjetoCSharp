@@ -35,6 +35,16 @@ public class StockController : ControllerBase{
             mensagem = "deu boa"
         };
     } 
+    [Authorize]
+    [HttpPut]
+    [Route("updateQuantity/{id}")]
+    public Object updates(int id){
+        var stockk = Model.Stocks.updateStock(id);
+        return new{
+            status = "ok",
+            mensagem = "deu boa"
+        };
+    } 
     [HttpGet]
     [Route("getStockID/{id}")]
     public int getStockID(int id){

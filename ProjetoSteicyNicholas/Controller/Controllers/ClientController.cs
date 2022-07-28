@@ -93,4 +93,12 @@ public class ClientController : ControllerBase
             return BadRequest("Empty credentials");
         }
     }
+
+
+    [Authorize]
+    [HttpPut]
+    [Route("update/{id}")]
+    public void updateClient([FromBody]ClientDTO client,int id){
+        var cliente = Model.Client.update(client,id);
+    } 
 }

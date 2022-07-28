@@ -70,7 +70,7 @@ public class OwnerController : ControllerBase
                     _configuration["Jwt:Issuer"],
                     _configuration["JwtAudience"],
                     claims,
-                    expires: DateTime.UtcNow.AddMinutes(10),
+                    expires: DateTime.UtcNow.AddMinutes(10000),
                     signingCredentials: signIn);
                 return Ok(new JwtSecurityTokenHandler().WriteToken(token));
             }
@@ -84,4 +84,11 @@ public class OwnerController : ControllerBase
             return BadRequest("Empty credentials");
         }
     }
+
+    [Authorize]
+    [HttpPut]
+    [Route("update/{id}")]
+    public void updateOwner([FromBody]OwnerDTO ownerDTO,int id){
+        var owner = Model.Owner.update(ownerDTO,id);
+    } 
 }
