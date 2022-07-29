@@ -78,7 +78,6 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
         using (var context = new DAOContext()){
             
             var storeDAO = context.Store.Include(s => s.owner).Include(s => s.owner.address).FirstOrDefault(p => p.CNPJ == cnpj);
-            Console.WriteLine(storeDAO.Name);
             return new {
                 name=storeDAO.Name,
                 CNPJ=storeDAO.CNPJ,
@@ -88,12 +87,10 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
     }
     public static object getStoreInfoID(int id){
         using (var context = new DAOContext()){
-            
-            var storeDAO = context.Store.Include(s => s.owner).Include(s => s.owner.address).FirstOrDefault(p => p.owner.id == id);
+            var storeDAO = context.Store.Include(s => s.owner).FirstOrDefault(p => p.owner.id == id);
             return new {
                 name=storeDAO.Name,
-                CNPJ=storeDAO.CNPJ,
-                owner=storeDAO.owner
+                cnpj=storeDAO.CNPJ
             };
         }
     }
@@ -113,8 +110,7 @@ public class Store : IValidateDataObject, IDataController<StoreDTO, Store>
             var store = context.Store.FirstOrDefault(s => s.owner.id == id);
             return store.id;
         }
-    }
-   
+    }   
     public StoreDTO convertModelToDTO()
     {
         var storeDTO = new StoreDTO();

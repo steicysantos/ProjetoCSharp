@@ -186,4 +186,18 @@ public class Stocks : IValidateDataObject, IDataController<StocksDTO, Stocks>
             return stock.id;
         }
     }
+
+    public static int updateStock(int id)
+    {
+        using (var context = new DAOContext()){
+            var stocks = context.Stock.FirstOrDefault(a => a.id == id);
+
+
+            if(stocks != null){
+                stocks.quantity=stocks.quantity-1;
+            }
+            context.SaveChanges();
+        }
+        return 1;
+    }
 }

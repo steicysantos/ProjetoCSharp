@@ -80,32 +80,34 @@ public class Owner : Person,IValidateDataObject,IDataController<OwnerDTO, Owner>
         }
          return id;
     }
-    // public int save(int owner)
-    // {
-    //     var id = 0;
 
-    //     using(var context = new DAOContext())
-    //     {
-          
-    //         var ownerDAO = context.Owner.Where(c => c.id == owner).Single();
+    public static int update(OwnerDTO ownerDTO, int id){
+        using (var context = new DAOContext()){
+            var owner = context.Owner.FirstOrDefault(a => a.id == id);
 
-    //         var store = new DAO.Store{
-    //             Name = this.name,
-    //             CNPJ = this.CNPJ,
-    //             owner = ownerDAO
-    //         };
-
-    //         context.Store.Add(store);
-    //         context.Entry(store.owner).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
-    //         context.SaveChanges();
-
-    //         id = store.id;
-
-    //     }
-    //      return id;
-    // }
-
-    public void update(OwnerDTO obj){
+            if(owner != null){
+                if(ownerDTO.name != null){
+                    owner.name = ownerDTO.name;
+                }
+                if(ownerDTO.date_of_birth !=null){
+                    owner.date_of_birth = ownerDTO.date_of_birth;
+                }
+                if(ownerDTO.document!=null){
+                     owner.document = ownerDTO.document;
+                }
+                if(ownerDTO.email!=null){
+                     owner.email = ownerDTO.email;
+                }
+                if(ownerDTO.phone!=null){
+                    owner.phone=ownerDTO.phone;
+                }
+                if(ownerDTO.login!=null){
+                    owner.login=ownerDTO.login;
+                }
+            }
+            context.SaveChanges();
+        }
+        return 1;
 
     }
 

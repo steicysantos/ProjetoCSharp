@@ -13,7 +13,7 @@ public class DAOContext:DbContext
     public DbSet<WishList> WishList {get;set;}
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(@"Server=JVLPC0506;Initial Catalog=MarketPlace_teste;Integrated Security=True;");
+        optionsBuilder.UseSqlServer(@"Server="+ Environment.MachineName +";Initial Catalog=MarketPlace_teste;Integrated Security=True;");
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

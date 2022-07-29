@@ -161,3 +161,26 @@ C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6
 C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.pdb
 C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.genruntimeconfig.cache
 C:\Users\VIN1CT\Desktop\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\ref\Model.dll
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\Model.deps.json
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\Model.runtimeconfig.json
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\Model.dll
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\Model.pdb
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\DAO.dll
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\DTO.dll
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\Enums.dll
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\Interfaces.dll
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\Interfaces.pdb
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\Enums.pdb
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\DTO.pdb
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\bin\Debug\net6.0\DAO.pdb
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.csproj.AssemblyReference.cache
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.AssemblyInfoInputs.cache
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.AssemblyInfo.cs
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.csproj.CoreCompileInputs.cache
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.csproj.CopyComplete
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.dll
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\refint\Model.dll
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.pdb
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\Model.genruntimeconfig.cache
+C:\Users\Gamer\OneDrive\Área de Trabalho\ProjetoCSharp\ProjetoSteicyNicholas\Model\obj\Debug\net6.0\ref\Model.dll

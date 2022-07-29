@@ -3,6 +3,7 @@ using Model;
 using DTO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+namespace Controller.Controllers;
 
 
 [ApiController]
@@ -37,7 +38,8 @@ public class AddressController:ControllerBase{
     [HttpPut]
     [Route("update/{id}")]
     public void updateAddress([FromBody]AddressDTO address,int id){
+        var iduser = Lib.GetIdFromRequest( Request.Headers["Authorization"].ToString());
         var addresss = new Model.Address();
-        addresss.update(address,id);
+        addresss.update(address,id,iduser);
     }    
 }

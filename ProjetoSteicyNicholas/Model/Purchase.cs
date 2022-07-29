@@ -49,38 +49,38 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
 
     }
 
-    // public int save()
-    // {
-    //     var id = 0;
-    //     using (var context = new DAOContext())
-    //     {
-    //         var clientDAO =  context.Client.FirstOrDefault(c => c.id == 1);
-    //         var storeDAO = context.stores.FirstOrDefault(s =>s.id ==1);
-    //         var productsDAO = context.products.Where(p => p.id == 1).Single();
+    public int save()
+    {
+        var id = 0;
+        using (var context = new DAOContext())
+        {
+            var clientDAO =  context.Client.FirstOrDefault(c => c.id == 1);
+            var storeDAO = context.Store.FirstOrDefault(s =>s.id ==1);
+            var productsDAO = context.Product.Where(p => p.id == 1).Single();
             
-    //         var purchase = new DAO.Purchase {
-    //             date_purchase = this.date_purchase,
-    //             payment_type = this.payment_type,
-    //             purchase_status = this.purchase_status,
-    //             purchase_values = this.purchase_value,
-    //             number_confirmation = this.getNumberConfirmation(),
-    //             number_nf = this.getNumberNf(),
-    //             client = clientDAO,
-    //             store = storeDAO,
-    //             product = productsDAO
-    //         };
+            var purchase = new DAO.Purchase {
+                date_purchase = this.date_purchase,
+                payment_type = this.payment_type,
+                purchase_status = this.purchase_status,
+                // purchase_values = this.purchase_value,
+                number_confirmation = this.getNumberConfirmation(),
+                number_nf = this.getNumberNF(),
+                client = clientDAO,
+                store = storeDAO,
+                product = productsDAO
+            };
 
-    //         context.purchases.Add(purchase);
-    //         context.Entry(purchase.client).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
-    //         context.Entry(purchase.store).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
-    //         context.Entry(purchase.product).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
-    //         context.SaveChanges();
-    //         id = purchase.id;
+            context.Purchase.Add(purchase);
+            context.Entry(purchase.client).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
+            context.Entry(purchase.store).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
+            context.Entry(purchase.product).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
+            context.SaveChanges();
+            id = purchase.id;
             
             
-    //     };
-    //     return id;
-    // }
+        };
+        return id;
+    }
     public int save(int client, int store, int product, DateTime data, PaymentEnum paymenttype, PurchaseStatusEnum status, string numberconf, string nf)
     {
         var id = 0;

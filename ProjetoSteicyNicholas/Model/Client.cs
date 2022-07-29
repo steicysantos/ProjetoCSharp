@@ -81,7 +81,30 @@ public class Client : Person, IValidateDataObject,IDataController<ClientDTO, Cli
          return id;
     }
 
-    public void update(ClientDTO obj){
+    public static int update(ClientDTO clientDTO, int id){
+        using (var context = new DAOContext()){
+            var client = context.Client.FirstOrDefault(a => a.id == id);
+
+            if(client != null){
+                if(clientDTO.name != null){
+                    client.name = clientDTO.name;
+                }
+                if(clientDTO.date_of_birth !=null){
+                    client.date_of_birth = clientDTO.date_of_birth;
+                }
+                if(clientDTO.document!=null){
+                     client.document = clientDTO.document;
+                }
+                if(clientDTO.email!=null){
+                     client.email = clientDTO.email;
+                }
+                if(clientDTO.phone!=null){
+                    client.phone=clientDTO.phone;
+                }
+            }
+            context.SaveChanges();
+        }
+        return 1;
 
     }
 
@@ -95,6 +118,7 @@ public class Client : Person, IValidateDataObject,IDataController<ClientDTO, Cli
             var ClientDAO=context.Client.Include(i=>i.address).FirstOrDefault(e=>e.id==id);
 
             return new {
+                id=ClientDAO.id,
                 name=ClientDAO.name,
                 email=ClientDAO.email,
                 passwd=ClientDAO.passwd,

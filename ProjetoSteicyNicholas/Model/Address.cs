@@ -79,10 +79,10 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
          return id;
     }
 
-    public void update(AddressDTO addressDTO)
+    public void update(AddressDTO addressDTO,int id, int iduser)
     {
          using (var context = new DAOContext()){
-            var address = context.Address.FirstOrDefault(a => a.id == addressDTO.id);
+            var address = context.Address.FirstOrDefault(a => a.id == id);
 
             if(address != null){
                 if(addressDTO.street != null){

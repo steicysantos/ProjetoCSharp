@@ -7214,28 +7214,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\disrct\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Gamer\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\testesAutomatizados\\testesAutomatizados.csproj",
+      "projectUniqueName": "C:\\Users\\Gamer\\OneDrive\\Área de Trabalho\\ProjetoCSharp\\ProjetoSteicyNicholas\\testesAutomatizados\\testesAutomatizados.csproj",
       "projectName": "testesAutomatizados",
-      "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\testesAutomatizados\\testesAutomatizados.csproj",
-      "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\testesAutomatizados\\obj\\",
+      "projectPath": "C:\\Users\\Gamer\\OneDrive\\Área de Trabalho\\ProjetoCSharp\\ProjetoSteicyNicholas\\testesAutomatizados\\testesAutomatizados.csproj",
+      "packagesPath": "C:\\Users\\Gamer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gamer\\OneDrive\\Área de Trabalho\\ProjetoCSharp\\ProjetoSteicyNicholas\\testesAutomatizados\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Gamer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -7248,14 +7245,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj": {
-              "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj"
+            "C:\\Users\\Gamer\\OneDrive\\Área de Trabalho\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj": {
+              "projectPath": "C:\\Users\\Gamer\\OneDrive\\Área de Trabalho\\ProjetoCSharp\\ProjetoSteicyNicholas\\DTO\\DTO.csproj"
             },
-            "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj": {
-              "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj"
+            "C:\\Users\\Gamer\\OneDrive\\Área de Trabalho\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj": {
+              "projectPath": "C:\\Users\\Gamer\\OneDrive\\Área de Trabalho\\ProjetoCSharp\\ProjetoSteicyNicholas\\Enums\\Enums.csproj"
             },
-            "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\Model.csproj"
+            "C:\\Users\\Gamer\\OneDrive\\Área de Trabalho\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\Gamer\\OneDrive\\Área de Trabalho\\ProjetoCSharp\\ProjetoSteicyNicholas\\Model\\Model.csproj"
             }
           }
         }
@@ -7298,7 +7295,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
